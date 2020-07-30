@@ -1,1 +1,1 @@
-![book 1]({{ site.baseurl }}/assets/main/cover1){:width="100%"}
+![book 1]({{ site.baseurl }}/assets/main/cover1.png){:width="100%"}
