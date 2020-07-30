@@ -20,15 +20,14 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
   <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-	    <img src="{{ site.baseurl }}/assets/main/banner.png" alt="{{ page.title | default: site.title | default: site.github.repository_name }}" class="project-name" />
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-	    
-        <a href="{{ site.github.repository_url }}" class="btn">Home</a>
-        <a href="{{ site.github.repository_url }}/archive" class="btn">Archive</a>
-        <a href="{{ site.github.repository_url }}/about" class="btn">About</a>
+      <img class="banner-img"/>
+      <h2 class="project-tagline">Calia Nova</h2>
+        
+      <a href="{{ site.baseurl }}" class="btn">Home</a>
+      <a href="{{ site.baseurl }}/archive" class="btn">Archive</a>
+      <a href="{{ site.baseurl }}/about" class="btn">About</a>
 
     </header>
 
