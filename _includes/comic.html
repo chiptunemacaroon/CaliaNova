@@ -1,5 +1,5 @@
 {% for image in site.static_files %}
     {% if image.path contains include.chapter_folder %}
-        ![image](image.path)
+        {{ image.path }}
     {% endif %}
 {% endfor %}

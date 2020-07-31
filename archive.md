@@ -6,6 +6,6 @@ title: Archive
 ## Chapters
 
 {% for chapter in site.archive %}
-    {{ chapter.title }}
+    [chapter.title](chapter.url)
 {% endfor %}
 
