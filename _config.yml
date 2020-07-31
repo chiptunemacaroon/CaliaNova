@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
+
 collections:
     archive:
       output: true
