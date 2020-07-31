@@ -10,3 +10,4 @@ title: Archive
 {% endfor %}
 
 [Link to a document]({% link archive/chapter_1.md %})
+{{ site.baseurl }}{% link archive/chapter_1.md %}
