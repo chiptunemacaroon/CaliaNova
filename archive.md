@@ -5,9 +5,7 @@ title: Archive
 
 ## Chapters
 
-{% for page in site.categories.archive %}
-    {{ page.title }}
+{% for chapter in site.archive %}
+    <a href="{{ cookie.url }}">{{ cookie.title }}</a>
 {% endfor %}
 
-[Link to a document]({% link archive/chapter_1.md %})
-{{ site.baseurl }}{% link archive/chapter_1.md %}
