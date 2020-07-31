@@ -4,12 +4,6 @@ title: Chapter 1
 chapter_folder: chapter_1
 ---
 
-{% raw %}
-
-~~html
 {% if page.chapter_folder %}
     {% include comic.html chapter_folder=page.chapter_folder %}
 {% endif %}
-~~
-
-{% endraw %}
