@@ -5,6 +5,8 @@ title: Archive
 
 ## Chapters
 
-{% for post in site.categories.archive %}
-    {{ post.title }}
+{% for page in site.categories.archive %}
+    {{ page.title }}
 {% endfor %}
+
+[Link to a document]({% link archive/chapter_1.md %})
