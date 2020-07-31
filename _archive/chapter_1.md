@@ -1,5 +1,5 @@
 ---
-layout: chapter
+layout: default
 title: Chapter 1
 chapter_folder: chapter_1
 ---

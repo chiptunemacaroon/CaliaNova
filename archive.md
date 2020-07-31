@@ -1,14 +1,14 @@
 ---
-layout: chapter
-chapter_folder: chapter_1
+layout: default
+title: Archive
 ---
 
 ## Chapters
 
 <ul>
-  {% for post in site.archive %}
+  {% for chapter in site.archive %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ chapter.url }}">{{ chapter.title }}</a>
     </li>
   {% endfor %}
 </ul>
