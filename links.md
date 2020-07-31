@@ -1,3 +1,8 @@
+---
+layout: default
+title: Links
+---
+
 ## Links
 
 [Instagram](https://www.instagram.com/chiptunemacaroon/?hl=en)

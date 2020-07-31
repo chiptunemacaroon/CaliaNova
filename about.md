@@ -1,3 +1,8 @@
+---
+layout: default
+title: About
+---
+
 ## About The Series
 
 **Aspiring witch Violet Amaryllis aims to reform the corrupt Hero Industry, and attending academy Calia Nova seems like the perfect way to do it!**

@@ -112,6 +112,7 @@ a {
   background-color: $header-bg-color;
   background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
 
+  position: relative;
   overflow: hidden;
 
   @include large {
@@ -125,6 +126,10 @@ a {
   @include small {
     padding: 2rem 1rem;
   }
+}
+
+.button-content {
+  position: relative;
 }
 
 .page-header img {
