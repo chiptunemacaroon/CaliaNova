@@ -1,5 +1,7 @@
-{% for image in site.static_files %}
-    {% if image.path contains include.chapter_folder %}
-        <image src="{{ image.path }}">
-    {% endif %}
-{% endfor %}
+<div>
+    {% for image in site.static_files %}
+        {% if image.path contains include.chapter_folder %}
+            <image src="{{ image.path }}">
+        {% endif %}
+    {% endfor %}
+</div>
