@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}"></html>
-
-    {% for image in site.static_files %}
-        {% if image.path contains chapter_folder %}
-            <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-        {% endif %}
-    {% endfor %}
-
-</html>
+{% for image in site.static_files %}
+    {% if image.path contains include.chapter_folder %}
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+    {% endif %}
+{% endfor %}

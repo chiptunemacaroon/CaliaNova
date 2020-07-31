@@ -6,9 +6,9 @@ title: Archive
 ## Chapters
 
 <ul>
-  {% for chapter in site.archive %}
+  {% for post in site.categories.archive %}
     <li>
-      <a href="{{ chapter.url }}">{{ chapter.title }}</a>
+      <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
