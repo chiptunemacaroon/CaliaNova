@@ -119,8 +119,8 @@ a {
   &:hover {
     color: $chapter-color-secondary;
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(207, 192, 226, 0.548);
+    border-color: $chapter-color;
   }
 
   + .btn {
