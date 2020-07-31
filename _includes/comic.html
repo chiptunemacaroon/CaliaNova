@@ -1,7 +1,14 @@
-<div>
-    {% for image in site.static_files %}
-        {% if image.path contains include.chapter_folder %}
-            <image src="{{ image.path }}">
-        {% endif %}
-    {% endfor %}
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+
+    <div class="img-holder">
+        {% for image in site.static_files %}
+            {% if image.path contains include.chapter_folder %}
+                <img
+                src="{{ site.baseurl }}{{ image.path }}"
+                alt="{{ image.id }}"
+                >
+            {% endif %}
+        {% endfor %}
+    </div>
+
 </div>
