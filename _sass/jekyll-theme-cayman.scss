@@ -151,6 +151,7 @@ a {
 .page-header {
   color: $header-heading-color;
   text-align: center;
+  position: relative;
   // background-color: $header-bg-color;
   // background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
 
@@ -175,6 +176,7 @@ a {
 .particle-js {
   background-color: $header-bg-color;
   background-image: linear-gradient($header-bg-color-secondary, $header-bg-color);
+  position: absolute;
 }
 
 .button-content {
