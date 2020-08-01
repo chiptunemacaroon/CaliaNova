@@ -1,20 +1,7 @@
 <div class="comic-strip">
 
     <div class="chapter-nav">
-        <button class="prev"></button>
-
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Chapters
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                {% for chapter in site.archive %}
-                <a href="{{ site.baseurl }}{{ chapter.url }}" class="chapter-btn">{{ chapter.title }}</a>
-                {% endfor %}
-              </div>
-            </div>
-        </div>
-       
+        <button class="prev"></button> 
         <button class="next"></button>
     </div>
     
@@ -30,19 +17,6 @@
 
     <div class="chapter-nav">
         <button class="prev"></button>
-
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Chapters
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                {% for chapter in site.archive %}
-                <a href="{{ site.baseurl }}{{ chapter.url }}" class="chapter-btn">{{ chapter.title }}</a>
-                {% endfor %}
-              </div>
-            </div>
-        </div>
-
         <button class="next"></button>
     </div>
     

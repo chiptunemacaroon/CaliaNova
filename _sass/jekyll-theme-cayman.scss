@@ -467,13 +467,14 @@ a {
 .prev
 {
   background: url(../main/previous.png) no-repeat;
+  background-size: 100%; 
   cursor: pointer;
   border: none;
   width: 100px;
-  height: 100px;
+  height: 70px;
 }
 
-.prev:hover /* use Dot here */
+.prev:hover
 {   
     background: url(../main/previous.png) no-repeat;
 }
@@ -481,13 +482,14 @@ a {
 .next
 {
   background: url(../main/next.png) no-repeat;
+  background-size: 100%; 
   cursor: pointer;
   border: none;
   width: 100px;
-  height: 100px;
+  height: 70px;
 }
 
-.next:hover /* use Dot here */
+.next:hover
 {   
     background: url(../main/next.png) no-repeat;
 }
