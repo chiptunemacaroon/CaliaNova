@@ -179,7 +179,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -999;
+  z-index: -10;
   height: 100%;
   width: 100%;
 
@@ -458,7 +458,8 @@ a {
     width: 100%;
   }
 
-  .prev{
+  .prev input
+  {
     background: url(../assets/main/previous.png) no-repeat;
     cursor: pointer;
     border: none;
@@ -466,12 +467,13 @@ a {
     height: 100px;
   }
 
-  .prev:active  /* use Dot here */
+  .prev:active input /* use Dot here */
   {   
       background: url(../assets/main/previous.png) no-repeat;
   }
 
-  .next{
+  .next input
+  {
     background: url(../assets/main/next.png) no-repeat;
     cursor: pointer;
     border: none;
@@ -479,7 +481,7 @@ a {
     height: 100px;
   }
 
-  .next:active  /* use Dot here */
+  .next:active input /* use Dot here */
   {   
       background: url(../assets/main/next.png) no-repeat;
   }
