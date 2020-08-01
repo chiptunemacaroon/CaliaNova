@@ -470,13 +470,13 @@ a {
   background-size: 100%; 
   cursor: pointer;
   border: none;
-  width: 100px;
-  height: 70px;
-}
 
-.prev:hover
-{   
-    background: url(../main/previous.png) no-repeat;
+  display: block;
+  max-height:95px;
+  width: auto;
+  height: auto;
+
+  padding-right: 50px;
 }
 
 .next
@@ -485,11 +485,11 @@ a {
   background-size: 100%; 
   cursor: pointer;
   border: none;
-  width: 100px;
-  height: 70px;
-}
 
-.next:hover
-{   
-    background: url(../main/next.png) no-repeat;
+  display: block;
+  max-height:95px;
+  width: auto;
+  height: auto;
+
+  padding-left: 50px;
 }
