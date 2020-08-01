@@ -151,6 +151,7 @@ a {
   color: $header-heading-color;
   text-align: center;
   overflow: hidden;
+  position: relative;
 
   @include large {
     padding: 5rem 6rem;
