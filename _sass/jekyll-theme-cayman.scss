@@ -109,8 +109,7 @@ a {
   display: inline-block;
   margin-bottom: 1rem;
   color: $chapter-color;
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: $chapter-color;
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
@@ -119,7 +118,7 @@ a {
   &:hover {
     color: $chapter-color-secondary;
     text-decoration: none;
-    background-color: rgba(207, 192, 226, 0.548);
+    background-color: rgba(235, 226, 247, 0.548);
     border-color: $chapter-color;
   }
 
