@@ -1,11 +1,22 @@
 <div class="comic-strip">
-{% for image in site.static_files %}
-{% if image.path contains include.chapter_folder %}
-    <img
-    src="{{ site.baseurl }}{{ image.path }}"
-    alt="{{ image.id }}"
-    >
-{% endif %}
-{% endfor %}
+    <div>
+        <input class="prev" type="submit">
+        <input class="next" type="submit">
+    </div>
+    
+    {% for image in site.static_files %}
+    {% if image.path contains include.chapter_folder %}
+        <img
+        src="{{ site.baseurl }}{{ image.path }}"
+        alt="{{ image.id }}"
+        >
+    {% endif %}
+    {% endfor %}
+
+    <div>
+        <input class="prev" type="submit">
+        <input class="next" type="submit">
+    </div>
+    
 </div>
 

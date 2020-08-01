@@ -118,7 +118,7 @@ a {
   &:hover {
     color: $chapter-color-secondary;
     text-decoration: none;
-    background-color: rgba(235, 226, 247, 0.548);
+    background-color: rgba(240, 233, 250, 0.425);
     border-color: $chapter-color;
   }
 
@@ -151,8 +151,6 @@ a {
 .page-header {
   color: $header-heading-color;
   text-align: center;
-  // background-color: $header-bg-color;
-  // background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
 
   @include large {
     padding: 5rem 6rem;
@@ -414,11 +412,6 @@ a {
     border: 0;
   }
 
-
-  .comic-strip {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .site-footer {
@@ -449,4 +442,40 @@ a {
 }
 
 
+// chapter info
 
+.comic-strip {
+  width: 100%;
+  height: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .prev{
+    background: url(../assets/main/previous.png) no-repeat;
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    height: 100px;
+  }
+
+  .prev:active  /* use Dot here */
+  {   
+      background: url(../assets/main/previous.png) no-repeat;
+  }
+
+  .next{
+    background: url(../assets/main/next.png) no-repeat;
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    height: 100px;
+  }
+
+  .next:active  /* use Dot here */
+  {   
+      background: url(../assets/main/next.png) no-repeat;
+  }
+}
