@@ -2,7 +2,7 @@ function loadParticles() {
     var options = {
       "particles": {
         "number": {
-          "value": 90,
+          "value": 50,
           "density": {
             "enable": true,
             "value_area": 552.4033491425909
