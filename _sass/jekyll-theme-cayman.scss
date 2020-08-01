@@ -111,9 +111,7 @@ a {
   border-radius: 0px;
   padding: 18px 36px;
   display: inline-block;
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: 14px;
-  letter-spacing: 1px;
+
   cursor: pointer;
   box-shadow: inset 0 0 0 0 #680049;
   -webkit-transition: ease-out 0.4s;
@@ -446,19 +444,43 @@ a {
 .prev
 {
   background: url(../main/previous.png) no-repeat;
-  background-size: 100%; 
+  background-size: 70%; 
   cursor: pointer;
-  border: none;
 
-  padding-right: 50px;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+
+  &:hover
+  {
+    transform: translate(0,3em);
+    -webkit-transform: translate(0,3em);
+    -moz-transform: translate(0,3em);
+    -o-transform: translate(0,3em);
+    -ms-transform: translate(0,3em);
+  }
 }
 
 .next
 {
   background: url(../main/next.png) no-repeat;
-  background-size: 100%; 
+  background-size: 70%; 
   cursor: pointer;
-  border: none;
+  
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
 
-  padding-left: 50px;
+  &:hover
+  {
+    transform: translate(3em,0);
+    -webkit-transform: translate(3em,0);
+    -moz-transform: translate(3em,0);
+    -o-transform: translate(3em,0);
+    -ms-transform: translate(3em,0);
+  }
 }
