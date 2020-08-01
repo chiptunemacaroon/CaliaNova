@@ -173,6 +173,7 @@ a {
 }
 
 .particle-js {
+  position: fixed;
   object-fit: cover; 
 
   background-color: $header-bg-color;
