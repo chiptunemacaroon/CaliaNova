@@ -150,6 +150,7 @@ a {
 .page-header {
   color: $header-heading-color;
   text-align: center;
+  overflow: hidden;
 
   @include large {
     padding: 5rem 6rem;
