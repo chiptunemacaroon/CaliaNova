@@ -460,7 +460,11 @@ a {
   }
 }
 
-.prev input
+.chapter-nav {
+  text-align: center;
+}
+
+.prev
 {
   background: url(../assets/main/previous.png) no-repeat;
   cursor: pointer;
@@ -469,12 +473,12 @@ a {
   height: 100px;
 }
 
-.prev:active input /* use Dot here */
+.prev:hover /* use Dot here */
 {   
     background: url(../assets/main/previous.png) no-repeat;
 }
 
-.next input
+.next
 {
   background: url(../assets/main/next.png) no-repeat;
   cursor: pointer;
@@ -483,7 +487,7 @@ a {
   height: 100px;
 }
 
-.next:active input /* use Dot here */
+.next:hover /* use Dot here */
 {   
     background: url(../assets/main/next.png) no-repeat;
 }
