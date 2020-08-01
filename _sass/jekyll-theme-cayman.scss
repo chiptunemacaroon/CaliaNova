@@ -177,7 +177,8 @@ a {
   top: 0;
   left: 0;
   z-index: -100;
-  object-fit: cover; 
+  height: 100%;
+  width: 100%;
 
   background-color: $header-bg-color;
   background-image: linear-gradient($header-bg-color-secondary, $header-bg-color);

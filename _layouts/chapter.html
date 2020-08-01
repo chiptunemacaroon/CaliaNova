@@ -12,18 +12,24 @@
       </script>
     {% endif %}
     <meta charset="UTF-8">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/particles.js"></script>
-
 {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
+
   <body>
-    <header class="page-header" role="banner">    
-      <img src="{{ site.baseurl }}/assets/main/logo.png" alt="banner-img"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/particles.js"></script>
+
+    
+    <header class="page-header">
+      <div class="particle-js" id="particle-js"> </div>
+      
+      <img src="{{ site.baseurl }}/assets/main/logo.png" alt="logo"/>
 
       <div class="button-content" name="buttons">
         <a href="{{ site.baseurl }}" class="btn">Home</a>
@@ -31,8 +37,8 @@
         <a href="{{ site.baseurl }}/about" class="btn">About</a>
         <a href="{{ site.baseurl }}/links" class="btn">Links</a>
       </div>
+    </header> 
 
-    </header>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
