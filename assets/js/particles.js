@@ -1,4 +1,4 @@
-particlesJS("particles-js", {
+particlesJS("page-header", {
     "particles": {
         "number": {
             "value": 60
