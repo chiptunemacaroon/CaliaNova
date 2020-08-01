@@ -466,7 +466,7 @@ a {
 
 .prev
 {
-  background: url(main/previous.png) no-repeat;
+  background: url(../assets/main/previous.png) no-repeat;
   cursor: pointer;
   border: none;
   width: 100px;
@@ -475,12 +475,12 @@ a {
 
 .prev:hover /* use Dot here */
 {   
-    background: url(main/previous.png) no-repeat;
+    background: url(../assets/main/previous.png) no-repeat;
 }
 
 .next
 {
-  background: url(main/next.png) no-repeat;
+  background: url(../assets/main/next.png) no-repeat;
   cursor: pointer;
   border: none;
   width: 100px;
@@ -489,5 +489,5 @@ a {
 
 .next:hover /* use Dot here */
 {   
-    background: url(amain/next.png) no-repeat;
+    background: url(../assets/main/next.png) no-repeat;
 }
