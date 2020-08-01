@@ -449,7 +449,8 @@ a {
 
 // chapter info
 
-.comic-strip {
+.comic-strip 
+{
   width: 100%;
   height: 100%;
 
@@ -457,32 +458,32 @@ a {
     height: 100%;
     width: 100%;
   }
+}
 
-  .prev input
-  {
+.prev input
+{
+  background: url(../assets/main/previous.png) no-repeat;
+  cursor: pointer;
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+
+.prev:active input /* use Dot here */
+{   
     background: url(../assets/main/previous.png) no-repeat;
-    cursor: pointer;
-    border: none;
-    width: 100px;
-    height: 100px;
-  }
+}
 
-  .prev:active input /* use Dot here */
-  {   
-      background: url(../assets/main/previous.png) no-repeat;
-  }
+.next input
+{
+  background: url(../assets/main/next.png) no-repeat;
+  cursor: pointer;
+  border: none;
+  width: 100px;
+  height: 100px;
+}
 
-  .next input
-  {
+.next:active input /* use Dot here */
+{   
     background: url(../assets/main/next.png) no-repeat;
-    cursor: pointer;
-    border: none;
-    width: 100px;
-    height: 100px;
-  }
-
-  .next:active input /* use Dot here */
-  {   
-      background: url(../assets/main/next.png) no-repeat;
-  }
 }
