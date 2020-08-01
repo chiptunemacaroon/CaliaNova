@@ -109,7 +109,7 @@ function loadParticles() {
       },
       "retina_detect": true
     };
-    particlesJS("page-header", options);
+    particlesJS("particle-js", options);
   }
   jQuery(document).ready(function() {
     loadParticles();
