@@ -1,9 +1,9 @@
-{% assign prev_link = "{{ page.prev }}" %}
+{% assign prev_link = {{ page.prev }} %}
 {% if prev_link == nil %}
     {% assign prev_link = "{{ site.baseurl }}/archive" %}
 {% endif %}
 
-{% assign next_link = "{{ page.next }}" %}
+{% assign next_link = {{ page.next }} %}
 {% if next_link == nil %}
     {% assign next_link = "{{ site.baseurl }}/archive" %}
 {% endif %}
