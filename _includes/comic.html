@@ -11,8 +11,8 @@
 <div class="comic-strip">
 
     <div class="chapter-nav">
-        <a class="prev" href="{{ prev_link }}"></a> 
-        <a class="next" href="{{ next_link }}"></a>
+        <a href="{{ prev_link }}" class="prev"></a>
+        <a href="{{ next_link }}" class="next"></a>
     </div>
     
     {% for image in site.static_files %}
@@ -26,8 +26,8 @@
 
 
     <div class="chapter-nav">
-        <a class="prev" href="{{ prev_link }}"></a>
-        <a class="next" href="{{ next_link }}"></a>
+        <a href="{{ prev_link }}" class="prev"></a>
+        <a href="{{ next_link }}" class="next"></a>
     </div>
     
 </div>
