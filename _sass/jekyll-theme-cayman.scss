@@ -449,6 +449,7 @@ a {
 #prev
 {
   background: url(../main/previous.png) no-repeat;
+  display: inline-block;
   background-size: cover;
   height: 60px;
   width: 60px;
@@ -468,6 +469,7 @@ a {
 #next
 {
   background: url(../main/next.png) no-repeat;  
+  display: inline-block;
   background-size: cover;
   height: 60px;
   width: 60px;
