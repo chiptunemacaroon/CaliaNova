@@ -1,8 +1,18 @@
+{% assign prev_link = "{{ page.prev }}" %}
+{% if prev_link == nil %}
+    {% assign prev_link = "{{ site.baseurl }}/archive" %}
+{% endif %}
+
+{% assign next_link = "{{ page.next }}" %}
+{% if next_link == nil %}
+    {% assign next_link = "{{ site.baseurl }}/archive" %}
+{% endif %}
+
 <div class="comic-strip">
 
     <div class="chapter-nav">
-        <button class="prev"></button> 
-        <button class="next"></button>
+        <button class="prev" href="{{ prev_link }}"></button> 
+        <button class="next" href="{{ next_link }}"></button>
     </div>
     
     {% for image in site.static_files %}
@@ -16,8 +26,8 @@
 
 
     <div class="chapter-nav">
-        <button class="prev"></button>
-        <button class="next"></button>
+        <button class="prev" href="{{ prev_link }}"></button>
+        <button class="next" href="{{ next_link }}"></button>
     </div>
     
 </div>
