@@ -1,11 +1,11 @@
 {% assign prev_link = {{ page.prev }} %}
 {% if prev_link == nil %}
-    {% assign prev_link = {{ site.baseurl }} | append: /archive %}
+    {% assign prev_link = {{ site.baseurl }} | append: '/archive' %}
 {% endif %}
 
 {% assign next_link = {{ page.next }} %}
 {% if next_link == nil %}
-    {% assign next_link = {{ site.baseurl }} | append: /archive %}
+    {% assign next_link = {{ site.baseurl }} | append: '/archive' %}
 {% endif %}
 
 <div class="comic-strip">
