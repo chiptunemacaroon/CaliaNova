@@ -444,8 +444,9 @@ a {
 .prev
 {
   background: url(../main/previous.png) no-repeat;
-  height: 100%;
-  width:100%;
+  background-size: cover;
+  height: 60px;
+  width: 60px;
   cursor: pointer;
 
   transition: transform 0.5s;
@@ -458,8 +459,9 @@ a {
 .next
 {
   background: url(../main/next.png) no-repeat;  
-  height: 100%;
-  width:100%;
+  background-size: cover;
+  height: 60px;
+  width: 60px;
   cursor: pointer;
 
   transition: transform 0.5s;
