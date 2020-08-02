@@ -107,9 +107,9 @@ a {
 
 .chapter-btn {
   color: #680049;
-  border: 2px solid #680049;
+  border-top: 2px solid #680049;
+  border-bottom: 2px solid #680049;
   border-radius: 0px;
-  padding: 18px 36px;
   display: inline-block;
 
   cursor: pointer;
@@ -444,43 +444,27 @@ a {
 .prev
 {
   background: url(../main/previous.png) no-repeat;
-  background-size: 70%; 
+  height: 100%;
+  width:100%;
   cursor: pointer;
 
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-
-  &:hover
-  {
-    transform: translate(0,3em);
-    -webkit-transform: translate(0,3em);
-    -moz-transform: translate(0,3em);
-    -o-transform: translate(0,3em);
-    -ms-transform: translate(0,3em);
+  transition: transform 0.5s;
+  
+  &:hover {
+      transform: translate(-10px, 0px);
   }
 }
 
 .next
 {
-  background: url(../main/next.png) no-repeat;
-  background-size: 70%; 
+  background: url(../main/next.png) no-repeat;  
+  height: 100%;
+  width:100%;
   cursor: pointer;
-  
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
 
-  &:hover
-  {
-    transform: translate(3em,0);
-    -webkit-transform: translate(3em,0);
-    -moz-transform: translate(3em,0);
-    -o-transform: translate(3em,0);
-    -ms-transform: translate(3em,0);
+  transition: transform 0.5s;
+  
+  &:hover {
+      transform: translate(10px, 0px);
   }
 }
