@@ -127,9 +127,6 @@ a {
     text-decoration: none;
   }
 
-  &:visited {
-    color: #613754;
-  }
 }
 
 .page-header {
@@ -464,6 +461,7 @@ a {
   
   &:hover {
       transform: translate(-10px, 0px);
+      border: none;
   }
 }
 
@@ -482,5 +480,6 @@ a {
   
   &:hover {
       transform: translate(10px, 0px);
+      border: none;
   }
 }
