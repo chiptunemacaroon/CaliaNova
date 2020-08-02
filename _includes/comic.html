@@ -1,18 +1,18 @@
 {% assign prev_link = {{ page.prev }} %}
 {% if prev_link == nil %}
-    {% assign prev_link = {{ site.baseurl }} | append: '/archive' %}
+    {% assign prev_link = 'https://caovicto.github.io/CaliaNova/archive' %}
 {% endif %}
 
 {% assign next_link = {{ page.next }} %}
 {% if next_link == nil %}
-    {% assign next_link = {{ site.baseurl }} | append: '/archive' %}
+    {% assign next_link = 'https://caovicto.github.io/CaliaNova/archive' %}
 {% endif %}
 
 <div class="comic-strip">
 
     <div class="chapter-nav">
-        <a href="{{ prev_link }}" class="prev"></a>
-        <a href="{{ next_link }}" class="next"></a>
+        <a href="{{ prev_link }}" id="prev"></a>
+        <a href="{{ next_link }}" id="next"></a>
     </div>
     
     {% for image in site.static_files %}
@@ -26,8 +26,8 @@
 
 
     <div class="chapter-nav">
-        <a href="{{ prev_link }}" class="prev"></a>
-        <a href="{{ next_link }}" class="next"></a>
+        <a href="{{ prev_link }}" id="prev"></a>
+        <a href="{{ next_link }}" id="next"></a>
     </div>
     
 </div>
