@@ -451,7 +451,6 @@ a {
   text-align: center;
   display:inline-block;
   width: 100%;
-  margin-top: 10px;
 
   img {
     object-fit: contain;
@@ -482,6 +481,7 @@ a {
     display: inline-block;
     padding: 16px;
     font-size: 16px;
+    margin-top: 0px;
 
     color: rgba(255, 255, 255, 0.7);
     background-color: rgba(255, 255, 255, 0.08);
@@ -527,9 +527,6 @@ a {
     display: block;
   }
   
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
 
 }
 
