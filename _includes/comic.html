@@ -1,20 +1,42 @@
-{% assign prev_link = {{ page.prev }} %}
-{% if prev_link == nil %}
+<!-- Assign next and prev variables -->
+{% if {{ page.previous }} == nil %}
     {% assign prev_link = 'https://caovicto.github.io/CaliaNova/archive' %}
+    {% assign prev_title = 'Table of Contents' %}
+{% else %}
+    {% assign prev_link = {{ site.baseurl }}{{ page.previous.url }}%}
+    {% assign prev_title = 'page.prev.title' %}
 {% endif %}
 
-{% assign next_link = {{ page.next }} %}
-{% if next_link == nil %}
+{% if {{ page.next }} == nil %}
     {% assign next_link = 'https://caovicto.github.io/CaliaNova/archive' %}
+    {% assign next_title = 'Table of Contents' %}
+{% else %}
+    {% assign next_link = {{ site.baseurl }}{{ page.next.url }}%}
+    {% assign next_title = 'page.next.title' %}
 {% endif %}
 
-<div class="comic-strip">
-
+<!-- Display Contents -->
+<div class="comic-strip" id="comic">
+    <!-- Navigation -->
     <div class="chapter-nav">
-        <a href="{{ prev_link }}" id="prev"></a>
-        <a href="{{ next_link }}" id="next"></a>
+        <a title="prev_title" href="{{ prev_link }}" id="prev"></a>
+
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Chapters
+            </a>
+        
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                {% for chapter in site.archive %}
+                    <a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <a title="next_title" href="{{ next_link }}" id="next"></a>
     </div>
     
+    <!-- Images -->
     {% for image in site.static_files %}
     {% if image.path contains include.chapter_folder %}
         <img
@@ -24,10 +46,23 @@
     {% endif %}
     {% endfor %}
 
-
+    <!-- Navigation -->
     <div class="chapter-nav">
-        <a href="{{ prev_link }}" id="prev"></a>
-        <a href="{{ next_link }}" id="next"></a>
+        <a title="prev_title" href="{{ prev_link }}" id="prev"></a>
+
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Chapters
+            </a>
+        
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                {% for chapter in site.archive %}
+                    <a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <a title="next_title" href="{{ next_link }}" id="next"></a>
     </div>
     
 </div>

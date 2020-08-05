@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
       <script>
@@ -26,6 +25,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/particles.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/scroll.js"></script>
 
     
     <header class="page-header">
@@ -43,6 +43,9 @@
 
 
     <main id="content" class="main-content" role="main">
+      <!-- Back to top button -->
+      <a id="top-button"></a>
+
       {{ content }}
 
       <footer class="site-footer">
