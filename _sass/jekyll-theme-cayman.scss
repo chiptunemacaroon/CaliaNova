@@ -459,11 +459,11 @@ a {
 
 .chapter-nav {
   text-align: center;
+  display:inline-block;
   width: 100%;
   height: 60px;
 
   img {
-    display: inline-block;
     object-fit: contain;
     border: none;
     max-width: 60px;
@@ -486,10 +486,6 @@ a {
         transform: translate(10px, 0px);
         border: none;
     }
-  }
-
-  .dropdown {
-    display:inline-block;
   }
 }
 
