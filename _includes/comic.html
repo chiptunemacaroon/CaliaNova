@@ -1,5 +1,5 @@
 <!-- Assign next and prev variables -->
-{% assign prev_link = nil %}
+<!-- {% assign prev_link = nil %}
 {% assign prev_title = nil %}
 {% assign next_link = nil %}
 {% assign next_title = nil %}
@@ -18,13 +18,14 @@
 {% else %}
     {% assign next_link = {{ site.baseurl }}{{ page.next.url }}%}
     {% assign next_title = {{ page.next.title }} %}
-{% endif %}
+{% endif %} -->
 
 <!-- Display Contents -->
 <div class="comic-strip" id="comic">
     <!-- Navigation -->
     <div class="chapter-nav">
-        <a title="prev_title" href="{{ prev_link }}" id="prev"></a>
+        <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}" id="first"></a>
+        <!-- <a title="prev_title" href="{{ prev_link }}" id="prev"></a>
 
         <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -38,7 +39,7 @@
             </div>
         </div>
 
-        <a title="next_title" href="{{ next_link }}" id="next"></a>
+        <a title="next_title" href="{{ next_link }}" id="next"></a> -->
     </div>
     
     <!-- Images -->
@@ -52,7 +53,8 @@
     {% endfor %}
 
     <!-- Navigation -->
-    <div class="chapter-nav">
+    <!-- <div class="chapter-nav">
+        <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}" id="first"></a>
         <a title="prev_title" href="{{ prev_link }}" id="prev"></a>
 
         <div class="dropdown show">
@@ -68,7 +70,7 @@
         </div>
 
         <a title="next_title" href="{{ next_link }}" id="next"></a>
-    </div>
+    </div> -->
     
 </div>
 
