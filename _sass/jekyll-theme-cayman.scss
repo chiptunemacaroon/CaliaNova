@@ -475,20 +475,25 @@ a {
     transition: transform 0.5s;
   }
 
-  a img:hover
+  .left
   {
-    position: relative;
+    &:hover {
+        transform: translate(-10px, 0px);
+        border: none;
+    }
+  }
+
+  .right
+  {
+    &:hover {
+        transform: translate(10px, 0px);
+        border: none;
+    }
   }
 }
 
 
-// .left .nav-button
-// {
-//   &:hover {
-//       transform: translate(-10px, 0px);
-//       border: none;
-//   }
-// }
+
 
 
 
