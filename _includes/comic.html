@@ -51,6 +51,14 @@
     </div>
     
     <!-- Images -->
+    <div>
+    <p>
+    {% for chapter in site.archive %}
+            {{ site.baseurl }}{{ chapter.url }} <br> {{ chapter.title }}
+    {% endfor %}
+    </p>
+    </div>
+
     {% for image in site.static_files %}
     {% if image.path contains include.chapter_folder %}
         <img
