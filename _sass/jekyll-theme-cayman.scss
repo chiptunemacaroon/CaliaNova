@@ -447,7 +447,7 @@ a {
   text-align: center;
 }
 
-.nav-button 
+#nav-button 
 {
   display: inline-block;
   // max-height:60px;
@@ -462,7 +462,7 @@ a {
   transition: transform 0.5s;
 }
 
-#first .nav-button
+#first #nav-button
 {
   background: url(../main/first.png) no-repeat;
 
@@ -472,7 +472,7 @@ a {
   }
 }
 
-#prev .nav-button
+#prev #nav-button
 {
   background: url(../main/previous.png) no-repeat;
   
@@ -482,7 +482,7 @@ a {
   }
 }
 
-#next .nav-button
+#next #nav-button
 {
   background: url(../main/next.png) no-repeat;  
   
@@ -492,7 +492,7 @@ a {
   }
 }
 
-#last .nav-button
+#last #nav-button
 {
   background: url(../main/last.png) no-repeat;
   
