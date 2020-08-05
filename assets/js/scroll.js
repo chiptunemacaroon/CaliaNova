@@ -1,6 +1,6 @@
 $(document).ready(function() { 
     $('html, body').animate({
-        scrollTop: $("#comic").offset().top
+        scrollTop: $("#first-nav").offset().top
     });
 }); 
 
@@ -9,7 +9,7 @@ var btn = $('#top-button');
 btn.on('click', function(e) {
   e.preventDefault();
   $('html, body').animate({
-    scrollTop: $("#comic").offset().top
+    scrollTop: $("#first-nav").offset().top
     });
 });
 
