@@ -1,6 +1,5 @@
 theme: jekyll-theme-cayman
-url: https://caovicto.github.io/
-baseurl: CaliaNova/
+
 collections:
     archive:
       output: true
