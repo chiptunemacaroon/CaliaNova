@@ -1,10 +1,10 @@
 <!-- Assign next and prev variables -->
-<!-- {% assign prev_link = nil %}
+{% assign prev_link = {{ page.previous }} %}
 {% assign prev_title = nil %}
-{% assign next_link = nil %}
+{% assign next_link = {{ page.next }} %}
 {% assign next_title = nil %}
 
-{% if {{ page.previous }} == nil %}
+{% if prev_link == nil %}
     {% assign prev_link = 'https://caovicto.github.io/CaliaNova/archive' %}
     {% assign prev_title = 'Table of Contents' %}
 {% else %}
@@ -12,13 +12,13 @@
     {% assign prev_title = {{ page.prev.title }} %}
 {% endif %}
 
-{% if {{ page.next }} == nil %}
+{% if next_link == nil %}
     {% assign next_link = 'https://caovicto.github.io/CaliaNova/archive' %}
     {% assign next_title = 'Table of Contents' %}
 {% else %}
     {% assign next_link = {{ site.baseurl }}{{ page.next.url }}%}
     {% assign next_title = {{ page.next.title }} %}
-{% endif %} -->
+{% endif %}
 
 <!-- Display Contents -->
 <div class="comic-strip" id="comic">
