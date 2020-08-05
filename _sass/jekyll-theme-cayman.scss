@@ -449,7 +449,7 @@ a {
 
 .chapter-nav {
   text-align: center;
-  display:inline-block;
+  display: inline-block;
   width: 100%;
 
   img {
@@ -478,6 +478,7 @@ a {
   }
 
   nav {
+    display: inline-block;
     margin: auto;
     position: relative;
     width: 100px;
@@ -486,7 +487,7 @@ a {
   nav h2 {
     border-radius: 2px;
     position: relative;
-    background: tomato;
+    background: CA0189;
     height: 40px;
     color: ivory;
     font-weight: 200;
@@ -541,7 +542,7 @@ a {
     width: 100%;
     margin: 0;
     margin-bottom: 5px;
-    background: tomato;
+    background: CA0189;
     transition: background 3s;
     box-shadow: 2px 2px 10px -2px rgba(0,0,0,.35);
   }
@@ -555,7 +556,7 @@ a {
     display: block;
     color: ivory;
     text-transform: lowercase;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 200;
     text-decoration: none;
     transition: color .3s;
