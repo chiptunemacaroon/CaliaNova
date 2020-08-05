@@ -466,10 +466,8 @@ a {
 {
   display: inline-block;
   object-fit: contain;
-  max-width: 100px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
+  width: 120px;
+  height: 60px;
   border: none;
 
   margin-right: 40px;
@@ -499,7 +497,7 @@ a {
 {
   background-color: #CA0189;
   color: white;
-  
+
   -webkit-transition: all .5s ease-out;
   transition: all .5s ease-out;
   transform: rotateX(90deg);
