@@ -150,18 +150,7 @@ a {
   text-align: center;
   overflow: hidden;
   position: relative;
-
-  @include large {
-    padding: 5rem 6rem;
-  }
-
-  @include medium {
-    padding: 3rem 4rem;
-  }
-
-  @include small {
-    padding: 2rem 1rem;
-  }
+  border-bottom: solid 5px white;
 
   img {
     width: 20%;
@@ -486,6 +475,10 @@ a {
         transform: translate(10px, 0px);
         border: none;
     }
+  }
+
+  .dropdown {
+    display: inline-block;
   }
 }
 
