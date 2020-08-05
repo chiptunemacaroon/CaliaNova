@@ -1,3 +1,6 @@
+<!-- Automatic scrolling -->
+<script src="{{ site.baseurl }}/assets/js/scroll.js"></script>
+
 <!-- Assign next and prev variables -->
 {% assign prev_link = {{ page.previous }} %}
 {% assign prev_title = nil %}
@@ -28,12 +31,15 @@
 {% endfor %}    
 
 
+<!-- Back to top button -->
+<a id="top-button"></a>
+
 <!-- Display Contents -->
 <div class="comic-strip" id="comic">
     <!-- Navigation -->
     <div class="chapter-nav">
-        <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}" class="first"></a>
-        <a title="prev_title" href="{{ prev_link }}" class="prev"></a>
+        <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}" id="first"></a>
+        <a title="prev_title" href="{{ prev_link }}" id="prev"></a>
 
         <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,8 +53,8 @@
             </div>
         </div>
 
-        <a title="next_title" href="{{ next_link }}" class="next"></a>
-        <a title="last_title" href="{{ last_link }}" class="last"></a>
+        <a title="next_title" href="{{ next_link }}" id="next"></a>
+        <a title="last_title" href="{{ last_link }}" id="last"></a>
     </div>
     
     <!-- Images -->

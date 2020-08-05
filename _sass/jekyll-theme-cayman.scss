@@ -462,7 +462,7 @@ a {
   transition: transform 0.5s;
 }
 
-.first .nav-button
+#first .nav-button
 {
   background: url(../main/first.png) no-repeat;
 
@@ -472,7 +472,7 @@ a {
   }
 }
 
-.prev .nav-button
+#prev .nav-button
 {
   background: url(../main/previous.png) no-repeat;
   
@@ -482,7 +482,7 @@ a {
   }
 }
 
-.next .nav-button
+#next .nav-button
 {
   background: url(../main/next.png) no-repeat;  
   
@@ -492,7 +492,7 @@ a {
   }
 }
 
-.last .nav-button
+#last .nav-button
 {
   background: url(../main/last.png) no-repeat;
   
@@ -523,7 +523,7 @@ a {
   border: none;
 }
 
-.top-button 
+#top-button 
 {
   display: inline-block;
   background-color: #FF9800;
@@ -541,7 +541,7 @@ a {
   z-index: 1000;
 }
 
-.top-button::after 
+#top-button::after 
 {
   content: "\f077";
   font-size: 2em;
@@ -549,18 +549,18 @@ a {
   color: #fff;
 }
 
-.top-button:hover 
+#top-button:hover 
 {
   cursor: pointer;
   background-color: #333;
 }
 
-.top-button:active 
+#top-button:active 
 {
   background-color: #555;
 }
 
-.top-button.show 
+#top-button.show 
 {
   opacity: 1;
   visibility: visible;
