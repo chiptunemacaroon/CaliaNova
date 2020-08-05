@@ -26,8 +26,10 @@
 {% endif %}
 
 {% for chapter in site.archive %}
-    {% assign last_link = {{ site.baseurl }}{{ chapter.url }} %}
-    {% assign last_title = {{ chapter.title }} %}
+    {% if chapter.title %}
+        {% assign last_link = {{ site.baseurl }}{{ chapter.url }} %}
+        {% assign last_title = {{ chapter.title }} %}
+    {% endif %}
 {% endfor %}    
 
 
