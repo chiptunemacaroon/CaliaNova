@@ -46,8 +46,8 @@ body {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: white;
   text-shadow: 
-            8px 8px #ff1f8f,
-            20px 20px #fff;
+    8px 8px #ff1f8f,
+    20px 20px #fff;
 }
 
 #skip-to-content {
@@ -464,13 +464,12 @@ a {
 
 .nav-button 
 {
-  background: yellow;
   display: inline-block;
   background-size: auto;
-  // max-height:60px;
-  // max-width:120px;
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
   border: none;
 
   margin-right: 40px;
@@ -479,58 +478,22 @@ a {
   transition: transform 0.5s;
 }
 
-.first .nav-button
+.left .nav-button
 {
-  // background: url(../main/first.png) no-repeat;
-  background: yellow;
-  display: inline-block;
-  background-size: auto;
-  // max-height:60px;
-  // max-width:120px;
-  width: 100px;
-  height: 100px;
-  border: none;
-
-  margin-right: 40px;
-  cursor: pointer;
-
-  transition: transform 0.5s;
-
   &:hover {
       transform: translate(-10px, 0px);
       border: none;
   }
 }
 
-.prev .nav-button
-{
-  background: url(../main/previous.png) no-repeat;
-  
-  &:hover {
-      transform: translate(-10px, 0px);
-      border: none;
-  }
-}
-
-.next .nav-button
-{
-  background: url(../main/next.png) no-repeat;  
-  
+.right .nav-button
+{  
   &:hover {
       transform: translate(10px, 0px);
       border: none;
   }
 }
 
-.last .nav-button
-{
-  background: url(../main/last.png) no-repeat;
-  
-  &:hover {
-      transform: translate(10px, 0px);
-      border: none;
-  }
-}
 
 .dropdown-menu 
 {
