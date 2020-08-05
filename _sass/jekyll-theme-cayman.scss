@@ -452,8 +452,10 @@ a {
   background: url(../main/first.png) no-repeat;
   display: inline-block;
   background-size: cover;
-  height: 60px;
-  width: 120px;
+  display: block;
+  max-height:60px;
+  width: auto;
+  height: auto;
   border: none;
 
   margin-right: 40px;
@@ -472,8 +474,10 @@ a {
   background: url(../main/previous.png) no-repeat;
   display: inline-block;
   background-size: cover;
-  height: 60px;
-  width: 60px;
+  display: block;
+  max-height:60px;
+  width: auto;
+  height: auto;
   border: none;
 
   margin-right: 40px;
@@ -492,8 +496,11 @@ a {
   background: url(../main/next.png) no-repeat;  
   display: inline-block;
   background-size: cover;
-  height: 60px;
-  width: 60px;
+  display: block;
+  display: block;
+  max-height:60px;
+  width: auto;
+  height: auto;
   border: none;
 
   margin-left: 40px;
@@ -512,8 +519,10 @@ a {
   background: url(../main/last.png) no-repeat;
   display: inline-block;
   background-size: cover;
-  height: 60px;
-  width: 120px;
+  display: block;
+  max-height:60px;
+  width: auto;
+  height: auto;
   border: none;
 
   margin-right: 40px;

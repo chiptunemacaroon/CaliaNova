@@ -3,6 +3,8 @@
 {% assign prev_title = nil %}
 {% assign next_link = {{ page.next }} %}
 {% assign next_title = nil %}
+{% assign last_link = {{ page.next }} %}
+{% assign last_title = nil %}
 
 {% if prev_link == nil %}
     {% assign prev_link = 'https://caovicto.github.io/CaliaNova/archive' %}
@@ -20,12 +22,17 @@
     {% assign next_title = {{ page.next.title }} %}
 {% endif %}
 
+{% for chapter in site.archive %}
+    {% assign last_link = {{ site.baseurl }}{{ chapter.url }} %}
+    {% assign last_title = {{ chapter.title }} %}
+{% endfor %}    
+
 <!-- Display Contents -->
 <div class="comic-strip" id="comic">
     <!-- Navigation -->
     <div class="chapter-nav">
         <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}" id="first"></a>
-        <!-- <a title="prev_title" href="{{ prev_link }}" id="prev"></a>
+        <a title="prev_title" href="{{ prev_link }}" id="prev"></a>
 
         <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -39,7 +46,8 @@
             </div>
         </div>
 
-        <a title="next_title" href="{{ next_link }}" id="next"></a> -->
+        <a title="next_title" href="{{ next_link }}" id="next"></a>
+        <a title="last_title" href="{{ last_link }}" id="last"></a>
     </div>
     
     <!-- Images -->
