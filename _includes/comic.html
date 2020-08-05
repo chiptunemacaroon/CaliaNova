@@ -1,10 +1,15 @@
 <!-- Assign next and prev variables -->
+{% assign prev_link = nil %}
+{% assign prev_title = nil %}
+{% assign next_link = nil %}
+{% assign next_title = nil %}
+
 {% if {{ page.previous }} == nil %}
     {% assign prev_link = 'https://caovicto.github.io/CaliaNova/archive' %}
     {% assign prev_title = 'Table of Contents' %}
 {% else %}
     {% assign prev_link = {{ site.baseurl }}{{ page.previous.url }}%}
-    {% assign prev_title = 'page.prev.title' %}
+    {% assign prev_title = {{ page.prev.title }} %}
 {% endif %}
 
 {% if {{ page.next }} == nil %}
@@ -12,7 +17,7 @@
     {% assign next_title = 'Table of Contents' %}
 {% else %}
     {% assign next_link = {{ site.baseurl }}{{ page.next.url }}%}
-    {% assign next_title = 'page.next.title' %}
+    {% assign next_title = {{ page.next.title }} %}
 {% endif %}
 
 <!-- Display Contents -->

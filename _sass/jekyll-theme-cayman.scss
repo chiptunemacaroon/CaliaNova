@@ -447,6 +447,26 @@ a {
   text-align: center;
 }
 
+#first
+{
+  background: url(../main/first.png) no-repeat;
+  display: inline-block;
+  background-size: cover;
+  height: 60px;
+  width: 120px;
+  border: none;
+
+  margin-right: 40px;
+  cursor: pointer;
+
+  transition: transform 0.5s;
+  
+  &:hover {
+      transform: translate(-10px, 0px);
+      border: none;
+  }
+}
+
 #prev
 {
   background: url(../main/previous.png) no-repeat;
@@ -477,6 +497,26 @@ a {
   border: none;
 
   margin-left: 40px;
+  cursor: pointer;
+
+  transition: transform 0.5s;
+  
+  &:hover {
+      transform: translate(10px, 0px);
+      border: none;
+  }
+}
+
+#last
+{
+  background: url(../main/last.png) no-repeat;
+  display: inline-block;
+  background-size: cover;
+  height: 60px;
+  width: 120px;
+  border: none;
+
+  margin-right: 40px;
   cursor: pointer;
 
   transition: transform 0.5s;
