@@ -4,6 +4,16 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+// Add your custom variables here
+$dropdown-bg:                       $dark;
+$dropdown-link-color:               $light;
+
+@import "~bootstrap/scss/bootstrap";
+
+
 @mixin large {
   @media screen and (min-width: #{$large-breakpoint}) {
     @content;
