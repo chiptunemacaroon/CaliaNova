@@ -152,7 +152,7 @@ a {
   position: relative;
   padding: 2rem 1rem;
 
-  border: 0 0 10px 0 solid;
+  border: 0 0 10px 0;
   border-image: radial-gradient(rgb(0,143,104), rgb(250,224,66)) 1;
 
   img {
@@ -500,10 +500,15 @@ a {
     transition: all .4s;
   }
   
-  nav:hover h2{
+  nav:hover h2 {
     transform: translateY(-2px);
-   }
-  nav:hover:active h2{
+  }
+
+  nav:hover ~ nav ul {
+    display: inline-block;
+  }
+
+  nav:hover:active h2 {
     transform: translateY(10px);
    }
   
@@ -524,7 +529,7 @@ a {
   
   nav ul {
     display: none;
-    
+
     padding-left: 0;
     padding-top: 0;
     margin-top: 0;
@@ -537,14 +542,8 @@ a {
     height: 100%;
   }
 
-  nav ul:hover ~ nav ul li:hover{
-    display: inline-block;
-    transition: all .4s ease-out;
-  }
-
   nav ul li {
-    display: none;
-
+    display: block;
     border-radius: 2px;
     position: relative;
     margin-left: 35px;
@@ -558,7 +557,7 @@ a {
   }
   
   nav ul li:hover {
-    display: inline-block;
+    
     background: mediumorchid;
     transition: background .45s;
   }
