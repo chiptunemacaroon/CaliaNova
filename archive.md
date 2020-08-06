@@ -7,6 +7,6 @@ title: Archive
 
 <ul style="padding: 0; list-style-type: none;"> 
     {% for chapter in site.archive %}
-        <a href="{{ site.baseurl }}{{ chapter.url }}" class="custom-btn">{{ chapter.title }}</a>
+        <li><a href="{{ site.baseurl }}{{ chapter.url }}">{{ chapter.title }}</a></li>
     {% endfor %}
 </ul>

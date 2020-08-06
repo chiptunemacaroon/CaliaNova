@@ -487,7 +487,7 @@ a {
   nav h2 {
     border-radius: 2px;
     position: relative;
-    background: CA0189;
+    background: #CA0189;
     height: 40px;
     color: ivory;
     font-weight: 200;
@@ -521,6 +521,7 @@ a {
   }
   
   nav ul {
+    display:none;
     padding-left: 0;
     padding-top: 0;
     margin-top: 0;
@@ -531,8 +532,13 @@ a {
     text-align: center;
     transition: all .4s ease-out;
     height: 100%;
-    
   }
+
+  nav ul:hover {
+    display:block;
+    transition: all .4s ease-out;
+  }
+
   nav ul li {
     border-radius: 2px;
     position: relative;
@@ -564,8 +570,6 @@ a {
   
 
 }
-
-
 
 
 #top-button 
