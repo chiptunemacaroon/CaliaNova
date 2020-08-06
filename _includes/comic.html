@@ -43,15 +43,18 @@
         <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}"><img class="left" src="{{ site.baseurl }}/assets/main/first.png"></a>
         <a title="{{ prev_title }}" href="{{ prev_link }}"><img class="left" src="{{ site.baseurl }}/assets/main/previous.png"></a>
 
-        <nav>
-            <h2>Chapters</h2>
-             <input id="toggle" type="checkbox" checked>
-          <ul>
-            {% for chapter in site.archive %}
-            <li><a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a></li>
-            {% endfor %}
-          </ul>
-       </nav>
+        <div class="col-md-3">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Chapters
+                </button>
+                <div class="dropdown-menu">
+                    {% for chapter in site.archive %}
+                    <a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a>
+                    {% endfor %}
+                </div>
+              </div>
+        </div>
         
         <a title="{{ next_title }}" href="{{ next_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/next.png"></a>
         <a title="{{ last_title }}" href="{{ last_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/last.png"></a>
