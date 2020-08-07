@@ -89,7 +89,7 @@
     border-style: solid;
     border-width: 3px;
     border-radius: 0.3rem;
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    transition: color 1s, background-color 1s, border-color 1s;
     outline: none;
 
     color: white;
@@ -149,7 +149,6 @@
         display: box;
         border-radius:3px;
         font-weight:300;
-        align-text: center;
         margin: auto;
         width: -webkit-max-content;
         height: -webkit-max-content;
@@ -213,20 +212,27 @@
     z-index:0;
   
     .button {
-      display:inline-block;
-      text-align:center;
-      padding:10px 15px;
-      margin:10px;
-      background:red;
-      font-size:18px;
-      background-color:#efefef;
-      border-radius:3px;
-      -webkit-transition: background-color 1s ease-out;
+        display:inline-block;
+        text-align:center;
+        background-color: #ca018a1e;
+        border-color: #ca018ac5;
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 0.3rem;
+        transition: color 1s, background-color 1s, border-color 1s;
+        outline: none;
+
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
   
       cursor:pointer;
       &:hover {
-        color:white;
-        background:#009bd5;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
       }
     }
   

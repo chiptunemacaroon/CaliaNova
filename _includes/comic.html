@@ -36,7 +36,7 @@
 <!-- Display Contents -->
 <div class="comic-strip" id="comic">
     <!-- Back to top button -->
-        <button onclick="topFunction()" id="top-btn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="top-btn" title="Go to top">Top</button>
 
     <!-- Navigation -->
     <div class="chapter-nav" id="first-nav">
@@ -56,28 +56,30 @@
 
         <div class="content">
             <div id="chapter-list" class="button">Chapters</div>
-          </div>
+        </div>
           
-          <div id="modal-container">
-            <div class="modal-background">
-              <div class="modal">    
-                <div class="modal-header">
-                  <span class="close">&times;</span>
-                </div>
-                <div class="modal-body">
-                  <ul>
-                    {% for chapter in site.archive %}
-                    <li><a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a></li>
-                    {% endfor %}
-                  </ul>
-                </div>
           
-              </div>
-            </div>
-          </div>
  
         <a title="{{ next_title }}" href="{{ next_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/next.png"></a>
         <a title="{{ last_title }}" href="{{ last_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/last.png"></a>
+    </div>
+
+    <div id="modal-container">
+      <div class="modal-background">
+        <div class="modal">    
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <ul>
+              {% for chapter in site.archive %}
+              <li><a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+    
+        </div>
+      </div>
     </div>
     
     <!-- Images -->
