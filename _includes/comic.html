@@ -1,5 +1,5 @@
 <!-- Automatic scrolling -->
-<script src="{{ site.baseurl }}/assets/js/scroll.js"></script>
+<script src="{{ site.baseurl }}/assets/js/comic.js"></script>
 
 <!-- Assign next and prev variables -->
 {% assign prev_link = {{ page.previous }} %}
@@ -36,30 +36,18 @@
 <!-- Display Contents -->
 <div class="comic-strip" id="comic">
     <!-- Back to top button -->
-    <button onclick="topFunction()" id="top-btn" title="Go to top">Top</button>
+    <div class="top-btn" title="Go to top">Top</div>   
 
     <!-- Navigation -->
     <div class="chapter-nav" id="first-nav">
         <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}"><img class="left" src="{{ site.baseurl }}/assets/main/first.png"></a>
         <a title="{{ prev_title }}" href="{{ prev_link }}"><img class="left" src="{{ site.baseurl }}/assets/main/previous.png"></a>
-
-        <!-- <div class="dropdown d-inline-block">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Chapters
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                {% for chapter in site.archive %}
-                <a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a>
-                {% endfor %}
-            </div>
-        </div> -->
-
+   
         <div class="content">
-            <div id="chapter-list" class="button">Chapters</div>
+          <div id="chapter-list" class="pink-btn">Chapters</div>
         </div>
+         
           
-          
- 
         <a title="{{ next_title }}" href="{{ next_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/next.png"></a>
         <a title="{{ last_title }}" href="{{ last_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/last.png"></a>
     </div>
@@ -67,6 +55,7 @@
     <div id="modal-container">
       <div class="modal-background">
         <div class="modal">    
+
           <div class="modal-header">
             <span class="close">&times;</span>
           </div>
@@ -77,7 +66,7 @@
               {% endfor %}
             </ul>
           </div>
-    
+          
         </div>
       </div>
     </div>

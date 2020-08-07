@@ -40,17 +40,21 @@ body {
   color: $body-text-color;
 }
 
-.pop-up
-{
-  font-size:120px;
-  letter-spacing:0.1em;
-  color: #c90087;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #d4cc72;
-  text-shadow: 10px 10px #412f84;
+.pop-up {
+  text-align: center;
+  span {
+    text-transform:uppercase;
+
+    font-size:5vw;
+    letter-spacing:0.5vw;
+    color: $theme-pink;
   
-  animation: glow-text 2s ease-in-out infinite alternate;
+    -webkit-text-stroke-width: 0.15vw;
+    -webkit-text-stroke-color: #e4dc8c;  
+    animation: glow-text 2s ease-in-out infinite alternate;
+  }
 }
+
 
 
 #skip-to-content {
@@ -83,13 +87,14 @@ a {
 .custom-btn {
   display: inline-block;
   margin-bottom: 1rem;
+  padding: 0.5vw;
   color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: 3px;
   border-radius: 0.3rem;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  transition: color 1s, background-color 1s, border-color 1s;
 
   &:hover {
     color: rgba(255, 255, 255, 0.8);
@@ -101,27 +106,7 @@ a {
   + .btn {
     margin-left: 1rem;
   }
-
-  @include large {
-    padding: 0.75rem 1rem;
-  }
-
-  @include medium {
-    padding: 0.6rem 0.9rem;
-    font-size: 0.9rem;
-  }
-
-  @include small {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 0.9rem;
-
-    + .btn {
-      margin-top: 1rem;
-      margin-left: 0;
-    }
-  }
+  
 }
 
 .page-header {

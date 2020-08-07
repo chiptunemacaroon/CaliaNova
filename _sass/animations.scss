@@ -45,18 +45,19 @@
 // Single animation
 @keyframes glow-text {
     from {
-      text-shadow: 10px 10px #412f84, 0 0 10px #d4cc72;
+      text-shadow: 0.5vw 0.5vw $theme-purple, 0 0 0.5vw $theme-yellow;
     }
     to {
-      text-shadow: 10px 10px #412f84, 0 0 25px #d4cc72;
+      text-shadow: 0.5vw 0.5vw $theme-purple, 0 0 1.5vw $theme-yellow;
     }
-}
+  }
+  
 
 @keyframes glow-image {
     from {
-        filter: drop-shadow(0px 0px 2px #dcd368);
+        filter: drop-shadow(0px 0px 2px $theme-yellow);
     }
     to {
-        filter: drop-shadow(0px 0px 6px #dcd368);
+        filter: drop-shadow(0px 0px 6px $theme-yellow);
     }
 }
