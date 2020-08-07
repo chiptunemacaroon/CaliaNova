@@ -1,7 +1,7 @@
 @import "normalize";
 @import "rouge-github";
 @import "variables";
-@import "comic";
+@import "animations";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
@@ -49,15 +49,6 @@ body {
   text-shadow: 10px 10px #412f84;
   
   animation: glow-text 2s ease-in-out infinite alternate;
-
-  @keyframes glow-text {
-    from {
-      text-shadow: 10px 10px #412f84, 0 0 10px #d4cc72;
-    }
-    to {
-      text-shadow: 10px 10px #412f84, 0 0 25px #d4cc72;
-    }
-  }
 }
 
 
@@ -132,7 +123,6 @@ a {
   }
 }
 
-
 .page-header {
   color: $header-heading-color;
   text-align: center;
@@ -150,7 +140,8 @@ a {
     min-height: 200px;
 
     animation: glow-text 2s ease-in-out infinite alternate;
-  }
+
+  
 }
 
 .particle-js {

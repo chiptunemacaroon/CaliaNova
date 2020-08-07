@@ -43,6 +43,15 @@
 
 
 // Single animation
+@keyframes glow-text {
+    from {
+      text-shadow: 10px 10px #412f84, 0 0 10px #d4cc72;
+    }
+    to {
+      text-shadow: 10px 10px #412f84, 0 0 25px #d4cc72;
+    }
+}
+
 @keyframes glow-image {
     from {
         box-shadow: 0 0 10px -10px #d4cc72;
