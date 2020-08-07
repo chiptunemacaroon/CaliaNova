@@ -3,6 +3,8 @@ function topFunction() {
     $('html, body').animate({
         scrollTop: $("#comic").offset().top
     });
+
+
 }
 
 
@@ -11,10 +13,12 @@ $(document).ready(topFunction);
 $(document).on('click', '.top-btn', topFunction); 
 
 
-$(document).on('click', '.pink-btn', function(){
+$(document).on('click', '.chapter-btn ', function(){
     console.log("click");
-    var buttonId = $(this).attr('id');
-    $('#modal-container').removeAttr('class').addClass(buttonId);
+    $('#modal-container').removeAttr('class').addClass('chapter-list');
+
+    $('.modal').css("margin-left", -$(".modal-body").width()/2);
+      
 })
 
 $(document).on('click', '.close', function(){

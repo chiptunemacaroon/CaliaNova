@@ -1,7 +1,7 @@
 ---
 layout: chapter
-title: Chapter 1
-chapter_folder: chapter_1
+title: Chapter 2
+chapter_folder: chapter_2
 ---
 
 {% include comic.html chapter_folder=page.chapter_folder %}

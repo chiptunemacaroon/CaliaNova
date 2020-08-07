@@ -20,15 +20,15 @@
   width: 100%;
 
   a {
-    padding: 10px;
+    padding: 0.5vw;
     display: inline-block;
   }
 
   img {
     object-fit: contain;
     border: none;
-    width: calc(20px + 3vw);
-    height: calc(20px + 3vw);
+    width: calc(40px + 2vw);
+    height: calc(40px + 2vw);
     cursor: pointer;
 
     filter: brightness(2.5);
@@ -56,29 +56,21 @@
 
 }
 
-
-.pink-btn
-{
+.custom-btn {
   display: inline-block;
   margin-bottom: 1rem;
-  padding: 0.5vw;
+  padding: calc(5px + 0.2vw);
   color: rgba(255, 255, 255, 0.7);
-  font-size: calc(10px + 0.5vw);
-
-  // background-color: #ca018a1e;
-  // border-color: #ca018ac5;
-  // border-style: solid;
+  font-size: calc(12px + 0.5vw);
 
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: 3px;
   border-radius: 0.3rem;
-  transition: color 1s, background-color 1s, border-color 1s;
+  transition: color 0.5s, background-color 0.5s, border-color 0.5s;
 
-
-  &:hover 
-  {
+  &:hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
@@ -86,25 +78,38 @@
     cursor: pointer;
   }
 
+  + .btn {
+    margin-left: 1rem;
+  }
+  
+}
+
+
+.chapter-btn 
+{
+  @extend .custom-btn;
+  
+  &:after {
+    margin-left: 0.7vw;
+    font-size: calc(12px + 0.7vw);
+    content: "\02261";
+  }
+
 }
 
 
 .top-btn 
 {
-  @extend .pink-btn;
+  @extend .custom-btn;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 1vw;
+  right: 2vw;
   z-index: 99;
 }
 
 
 #modal-container {
   position:fixed;
-  // display:inline-block;
-  // text-align:center;
-  // margin: 0 auto;
-
   height:100%;
   width:100%;
   top:0;
@@ -136,25 +141,23 @@
 
   .modal-background {
     display:inline-block;
-    // text-align:center;
-    // margin: 0 auto;
 
-    background:rgba(255, 137, 235, 0.226);
+    background:$horizon;
     height: 100%;
     width: 100%;
   }
   
   .modal {
+    display:block;
     position:relative;
-    display:inline-block;
-    // text-align:center;
-    // margin: 0 auto;
 
     top: 10%;
+    left: 50%;
+
     z-index: 10;
-    background:white;
+    background-color: rgba(56, 56, 56, 0.95);
+    border-color: rgba(255, 255, 255, 0.2);
     border-radius:3px;
-    font-weight:300;
 
     width: -webkit-max-content;
     height: -webkit-max-content;
@@ -162,24 +165,26 @@
   }
 
   .modal-header {
-    padding: 0 0 0 0;
-    margin: 0;
+    padding: 0;
+    display: table;
+    margin: auto;
     height: auto;
     width: auto;
+    border: none;
   }
 
   /* The Close Button */
   .close {
-    color: #aaaaaa;
-    float: center;
-    padding-bottom: 0;
-    font-size: 28px;
+    color: #fff4f4;
+    padding: 0.5vw;
+    margin: 0;
+    font-size: 3vw;
     font-weight: bold;
   }
 
   .close:hover,
   .close:focus {
-    color: #000;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     cursor: pointer;
   }
@@ -193,16 +198,22 @@
       list-style-type: none;
       
       li {
-        padding: 10px 20px 10px 20px;
-        // -webkit-transition: background-color 1s ease-out;
+        padding: 0.5vw 1vw 0.5vw 1vw;
+        transition: background-color 0.5s;
+
+        &:hover {
+          background-color: #f5dcf263;
+        }
       }
       
-      li:hover {
-        background-color: #f5dcf2;
-      }
       
       li a {
         text-decoration: none;
+        color: #fff4f4;
+        
+        &:hover {
+          background-color: transparent;
+        }
       }
     }
   }
@@ -212,9 +223,13 @@
   position:relative;
   display:inline-block;
   text-align:center;
-  padding: 0 10px 0 10px;
+  padding: 0 0.5vw 0 0.5vw;
   z-index: 0;
 }
   
   
-  
+.chapter-pages 
+{
+  margin-top: 1vw;
+  border: 0.2vw solid rgba(255, 255, 255, 0.8);
+}

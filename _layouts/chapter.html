@@ -16,8 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
 
   <body>
@@ -26,11 +26,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="{{ site.baseurl }}/assets/js/particles.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/comic.js"></script>
 
     
     <header class="page-header">
-      <div class="particle-js" id="particle-js"> </div>
+      <div class="particle-js" id="particle-js"></div>
+
+      <div id="halo"></div>
       
       <img src="{{ site.baseurl }}/assets/main/logo.png" alt="logo"/>
 
@@ -43,9 +44,7 @@
     </header> 
 
 
-    <main id="content" class="main-content" role="main">
-      <!-- Back to top button -->
-      <a class="top-button" id="top-button"></a>
+    <main id="content" class="main-content" role="main" style="animation:none;">
       {{ content }}
 
       <footer class="site-footer">

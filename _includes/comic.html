@@ -2,35 +2,22 @@
 <script src="{{ site.baseurl }}/assets/js/comic.js"></script>
 
 <!-- Assign next and prev variables -->
-{% assign prev_link = {{ page.previous }} %}
-{% assign prev_title = nil %}
-{% assign next_link = {{ page.next }} %}
-{% assign next_title = nil %}
-{% assign last_link = {{ page.next }} %}
-{% assign last_title = nil %}
+{% assign prev_link = {{ site.baseurl }} | append: "/archive" %}
+{% assign next_link = {{ site.baseurl }} | append: "/archive" %}
 
-{% if prev_link == nil %}
-    {% assign prev_link = 'https://caovicto.github.io/CaliaNova/archive' %}
-    {% assign prev_title = 'Table of Contents' %}
-{% else %}
-    {% assign prev_link = {{ site.baseurl }}{{ page.previous.url }}%}
-    {% assign prev_title = {{ page.prev.title }} %}
-{% endif %}
-
-{% if next_link == nil %}
-    {% assign next_link = 'https://caovicto.github.io/CaliaNova/archive' %}
-    {% assign next_title = 'Table of Contents' %}
-{% else %}
-    {% assign next_link = {{ site.baseurl }}{{ page.next.url }}%}
-    {% assign next_title = {{ page.next.title }} %}
-{% endif %}
-
-{% for chapter in site.archive %}
-    {% if chapter.title %}
-        {% assign last_link = {{ site.baseurl }}{{ chapter.url }} %}
-        {% assign last_title = {{ chapter.title }} %}
+{% for post in site.archive %}
+    {% if post.title == page.title %}
+        {% unless forloop.last %}
+            {% assign next = site.archive[forloop.index] %}
+            {% assign next_link = next.url %}
+        {% endunless %}
+        {% unless forloop.first %}
+          {% assign prev_link = prev.url %}
+        {% endunless %}
     {% endif %}
-{% endfor %}    
+    {% assign prev = post %}
+{% endfor %}
+
 
 
 <!-- Display Contents -->
@@ -40,16 +27,16 @@
 
     <!-- Navigation -->
     <div class="chapter-nav" id="first-nav">
-        <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}"><img class="left" src="{{ site.baseurl }}/assets/main/first.png"></a>
-        <a title="{{ prev_title }}" href="{{ prev_link }}"><img class="left" src="{{ site.baseurl }}/assets/main/previous.png"></a>
+        <a title="first" href="{{ site.baseurl }}{{ site.archive.first.url }}"><img class="left" src="{{ site.baseurl }}/assets/main/first.png"></a>
+        <a title="previous" href="{{ prev_link }}"><img class="left" src="{{ site.baseurl }}/assets/main/previous.png"></a>
    
         <div class="content">
-          <div id="chapter-list" class="pink-btn">Chapters</div>
+          <div title="Chapter List" id="chapter-list" class="chapter-btn">{{ page.title }}</div>
         </div>
          
           
-        <a title="{{ next_title }}" href="{{ next_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/next.png"></a>
-        <a title="{{ last_title }}" href="{{ last_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/last.png"></a>
+        <a title="next" href="{{ next_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/next.png"></a>
+        <a title="last" href="{{ site.baseurl }}{{ site.archive.last.url }}"><img class="right" src="{{ site.baseurl }}/assets/main/last.png"></a>
     </div>
 
     <div id="modal-container">
@@ -66,20 +53,20 @@
               {% endfor %}
             </ul>
           </div>
-          
+
         </div>
       </div>
     </div>
     
-    <!-- Images -->
-    {% for image in site.static_files %}
-    {% if image.path contains include.chapter_folder %}
-        <img
-        src="{{ site.baseurl }}{{ image.path }}"
-        alt="{{ image.id }}"
-        >
-    {% endif %}
-    {% endfor %}
-    
+    <div class="chapter-pages">
+      <!-- Images -->
+      {% assign files = site.static_files %}
+      {% for image in files  %}
+        {% if image.path contains include.chapter_folder %}
+          <img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.id }}">
+        {% endif %}
+      {% endfor %}
+    </div>
+
 </div>
 

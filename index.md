@@ -4,7 +4,9 @@ title: Home
 ---
 
 <div class="pop-up">
-    <span>Book 1</span>
+    <span>Latest Chapter</span>
 </div>
 
-[![book 1]({{ site.baseurl }}/assets/main/cover1.png){:width="100%"}]({{ site.baseurl }}/archive/chapter_1.html "Chapter 1")
+<div class="chapter-pages">
+    <a href="{{ site.baseurl }}{{ site.archive.last.url }}" title="Latest Chapter"><img src="{{ site.baseurl }}/assets/main/latest-cover.png"></a>
+</div>

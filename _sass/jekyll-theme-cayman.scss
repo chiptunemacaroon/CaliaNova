@@ -38,19 +38,21 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: $body-text-color;
+
 }
 
 .pop-up {
   text-align: center;
+  padding-bottom: 2vw;
+
   span {
     text-transform:uppercase;
-
-    font-size: calc(40px + 5vw);
-
+    font-size: min(100px, calc(40px + 5vw));
+    line-height: 2.5vw;
     letter-spacing:0.5vw;
     color: $theme-pink;
   
-    -webkit-text-stroke-width: calc(3px + 0.15vw);
+    -webkit-text-stroke-width: calc(1px + 0.15vw);
     -webkit-text-stroke-color: #e4dc8c;  
     animation: glow-text 2s ease-in-out infinite alternate;
   }
@@ -85,39 +87,17 @@ a {
   }
 }
 
-.custom-btn {
-  display: inline-block;
-  margin-bottom: 1rem;
-  padding: 0.5vw;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  border-style: solid;
-  border-width: 3px;
-  border-radius: 0.3rem;
-  transition: color 1s, background-color 1s, border-color 1s;
-
-  &:hover {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
-  }
-
-  + .btn {
-    margin-left: 1rem;
-  }
-  
-}
 
 .page-header {
   color: $header-heading-color;
   text-align: center;
   overflow: hidden;
   position: relative;
-  padding: 2rem 1rem;
-  border-bottom: 10px;
-  border-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 0 1vw 4vw;
+
+  background-image: radial-gradient(120vw 2vw at bottom, $header-bg-color 0, $header-bg-color 100vh, $horizon-second 110vh, $horizon 150vh, transparent 270vh);
 
   img {
     width: 20%;
@@ -140,52 +120,18 @@ a {
   height: 100%;
   width: 100%;
 
-  background-color: $header-bg-color;
-  background-image: linear-gradient($header-bg-color-secondary, $header-bg-color);
+  background-color: $header-bg-color;  
 }
+
 
 .button-content {
   position: relative;
 }
 
 
-.project-name {
-  margin-top: 0;
-  margin-bottom: 0.1rem;
-
-  @include large {
-    font-size: 3.25rem;
-  }
-
-  @include medium {
-    font-size: 2.25rem;
-  }
-
-  @include small {
-    font-size: 1.75rem;
-  }
-}
-
-.project-tagline {
-  margin-bottom: 2rem;
-  font-weight: normal;
-  opacity: 0.7;
-
-  @include large {
-    font-size: 1.25rem;
-  }
-
-  @include medium {
-    font-size: 1.15rem;
-  }
-
-  @include small {
-    font-size: 1rem;
-  }
-}
-
 .main-content {
   word-wrap: break-word;
+  animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
 
   :first-child {
     margin-top: 0;
@@ -240,138 +186,6 @@ a {
 
   p {
     margin-bottom: 1em;
-  }
-
-  code {
-    padding: 2px 4px;
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 0.9rem;
-    color: $code-text-color;
-    background-color: $code-bg-color;
-    border-radius: 0.3rem;
-  }
-
-  pre {
-    padding: 0.8rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font: 1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    color: $code-text-color;
-    word-wrap: normal;
-    background-color: $code-bg-color;
-    border: solid 1px $border-color;
-    border-radius: 0.3rem;
-
-    > code {
-      padding: 0;
-      margin: 0;
-      font-size: 0.9rem;
-      color: $code-text-color;
-      word-break: normal;
-      white-space: pre;
-      background: transparent;
-      border: 0;
-    }
-  }
-
-  .highlight {
-    margin-bottom: 1rem;
-
-    pre {
-      margin-bottom: 0;
-      word-break: normal;
-    }
-  }
-
-  .highlight pre,
-  pre {
-    padding: 0.8rem;
-    overflow: auto;
-    font-size: 0.9rem;
-    line-height: 1.45;
-    border-radius: 0.3rem;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  pre code,
-  pre tt {
-    display: inline;
-    max-width: initial;
-    padding: 0;
-    margin: 0;
-    overflow: initial;
-    line-height: inherit;
-    word-wrap: normal;
-    background-color: transparent;
-    border: 0;
-
-    &:before,
-    &:after {
-      content: normal;
-    }
-  }
-
-  ul,
-  ol {
-    margin-top: 0;
-  }
-
-  blockquote {
-    padding: 0 1rem;
-    margin-left: 0;
-    color: $blockquote-text-color;
-    border-left: 0.3rem solid $border-color;
-
-    > :first-child {
-      margin-top: 0;
-    }
-
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  table {
-    display: block;
-    width: 100%;
-    overflow: auto;
-    word-break: normal;
-    word-break: keep-all; // For Firefox to horizontally scroll wider tables.
-    -webkit-overflow-scrolling: touch;
-
-    th {
-      font-weight: bold;
-    }
-
-    th,
-    td {
-      padding: 0.5rem 1rem;
-      border: 1px solid $table-border-color;
-    }
-  }
-
-  dl {
-    padding: 0;
-
-    dt {
-      padding: 0;
-      margin-top: 1rem;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-
-    dd {
-      padding: 0;
-      margin-bottom: 1rem;
-    }
-  }
-
-  hr {
-    height: 2px;
-    padding: 0;
-    margin: 1rem 0;
-    background-color: $hr-border-color;
-    border: 0;
   }
 
 }

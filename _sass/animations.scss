@@ -1,4 +1,13 @@
 // Full page animations
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+ } 
+
 @keyframes unfoldIn {
     0% {
         transform:scaleY(.005) scaleX(0);
@@ -45,10 +54,10 @@
 // Single animation
 @keyframes glow-text {
     from {
-      text-shadow: calc(5px + 0.5vw) calc(5px + 0.5vw) $theme-purple, 0 0 calc(2px + 0.5vw) $theme-yellow;
+      text-shadow: calc(5px + 0.5vw) calc(5px + 0.5vw) $theme-purple, 0 0 calc(1px + 0.5vw) $theme-yellow;
     }
     to {
-      text-shadow: calc(5px + 0.5vw) calc(5px + 0.5vw) $theme-purple, 0 0 calc(5px + 1.5vw) $theme-yellow;
+      text-shadow: calc(5px + 0.5vw) calc(5px + 0.5vw) $theme-purple, 0 0 calc(3px + 1.5vw) $theme-yellow;
     }
   }
   
