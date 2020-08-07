@@ -2,6 +2,7 @@
 @import "rouge-github";
 @import "variables";
 @import "animations";
+@import "comic";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
@@ -139,7 +140,7 @@ a {
     height: 20%;
     min-height: 200px;
 
-    animation: glow-text 2s ease-in-out infinite alternate;
+    animation: glow-image 2s ease-in-out infinite alternate;
   }
   
 }

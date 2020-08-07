@@ -43,7 +43,7 @@
         <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}"><img class="left" src="{{ site.baseurl }}/assets/main/first.png"></a>
         <a title="{{ prev_title }}" href="{{ prev_link }}"><img class="left" src="{{ site.baseurl }}/assets/main/previous.png"></a>
 
-        <div class="dropdown d-inline-block">
+        <!-- <div class="dropdown d-inline-block">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Chapters
               </button>
@@ -52,7 +52,7 @@
                 <a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a>
                 {% endfor %}
             </div>
-        </div>
+        </div> -->
 
         <div class="content">
             <div id="chapter-list" class="button">Chapters</div>
@@ -89,26 +89,6 @@
         >
     {% endif %}
     {% endfor %}
-
-    <!-- Navigation -->
-    <div class="chapter-nav" id="first-nav">
-        <a title="{{ site.archive.first.title }}" href="{{ site.baseurl }}{{ site.archive.first.url }}"><img class="left" src="{{ site.baseurl }}/assets/main/first.png"></a>
-        <a title="{{ prev_title }}" href="{{ prev_link }}"><img class="left" src="{{ site.baseurl }}/assets/main/previous.png"></a>
-
-        <div class="dropdown d-inline-block">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Chapters
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                {% for chapter in site.archive %}
-                <a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a>
-                {% endfor %}
-            </div>
-        </div>
- 
-        <a title="{{ next_title }}" href="{{ next_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/next.png"></a>
-        <a title="{{ last_title }}" href="{{ last_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/last.png"></a>
-    </div>
     
 </div>
 

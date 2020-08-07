@@ -54,9 +54,9 @@
 
 @keyframes glow-image {
     from {
-        box-shadow: 0 0 10px -10px #d4cc72;
+        filter: drop-shadow(0px 0px 2px #dcd368);
     }
     to {
-        box-shadow: 0 0 10px 10px #d4cc72;
+        filter: drop-shadow(3px 3px 2px #dcd368);
     }
 }
