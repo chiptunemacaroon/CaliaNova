@@ -45,11 +45,12 @@ body {
   span {
     text-transform:uppercase;
 
-    font-size:5vw;
+    font-size: calc(40px + 5vw);
+
     letter-spacing:0.5vw;
     color: $theme-pink;
   
-    -webkit-text-stroke-width: 0.15vw;
+    -webkit-text-stroke-width: calc(3px + 0.15vw);
     -webkit-text-stroke-color: #e4dc8c;  
     animation: glow-text 2s ease-in-out infinite alternate;
   }

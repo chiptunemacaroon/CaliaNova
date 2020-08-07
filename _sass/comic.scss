@@ -27,8 +27,8 @@
   img {
     object-fit: contain;
     border: none;
-    width: 60px;
-    height: 60px;
+    width: calc(20px + 3vw);
+    height: calc(20px + 3vw);
     cursor: pointer;
 
     filter: brightness(2.5);
@@ -39,7 +39,7 @@
   .left {
     &:hover {
       filter: brightness(5);
-      transform: translate(-10px, 0px);
+      transform: translate(-1vw, 0px);
       border: none;
     }
   }
@@ -48,7 +48,7 @@
   {
     &:hover {
       filter: brightness(5);
-      transform: translate(10px, 0px);
+      transform: translate(1vw, 0px);
       border: none;
     }
   }
@@ -63,6 +63,7 @@
   margin-bottom: 1rem;
   padding: 0.5vw;
   color: rgba(255, 255, 255, 0.7);
+  font-size: calc(10px + 0.5vw);
 
   // background-color: #ca018a1e;
   // border-color: #ca018ac5;
@@ -82,6 +83,7 @@
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
   }
 
 }
@@ -210,6 +212,7 @@
   position:relative;
   display:inline-block;
   text-align:center;
+  padding: 0 10px 0 10px;
   z-index: 0;
 }
   
