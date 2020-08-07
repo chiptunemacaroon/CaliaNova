@@ -41,16 +41,25 @@ body {
 
 .pop-up
 {
-  transform: translate(-50%, -50%);
   font-size:120px;
   letter-spacing:0.1em;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: white;
-  text-shadow: 
-    8px 8px #ff1f8f,
-    20px 20px #fff;
+  color: #c90087;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #d4cc72;
+  text-shadow: 10px 10px #412f84;
+  
+  animation: glow-text 2s ease-in-out infinite alternate;
+
+  @keyframes glow-text {
+    from {
+      text-shadow: 10px 10px #412f84, 0 0 10px #d4cc72;
+    }
+    to {
+      text-shadow: 10px 10px #412f84, 0 0 25px #d4cc72;
+    }
+  }
 }
+
 
 #skip-to-content {
   height: 1px;
@@ -132,13 +141,15 @@ a {
   padding: 2rem 1rem;
 
   border-width: 5px;
-  border-image: radial-gradient(rgb(0,143,104), rgb(250,224,66)) 1;
+  border-image: 10px white;
 
   img {
     width: 20%;
     min-width: 300px;
     height: 20%;
     min-height: 200px;
+
+    animation: glow-text 2s ease-in-out infinite alternate;
   }
 }
 
