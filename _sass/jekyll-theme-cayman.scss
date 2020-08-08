@@ -140,22 +140,22 @@ a {
     margin-top: 0;
   }
 
-  @include large {
-    max-width: 64rem;
-    padding: 2rem 6rem;
-    margin: 0 auto;
-    font-size: 1.1rem;
-  }
+  // @include large {
+  //   max-width: 64rem;
+  //   padding: 2rem 6rem;
+  //   margin: 0 auto;
+  //   font-size: 1.1rem;
+  // }
 
-  @include medium {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
-  }
+  // @include medium {
+  //   padding: 2rem 4rem;
+  //   font-size: 1.1rem;
+  // }
 
-  @include small {
-    padding: 2rem 1rem;
-    font-size: 1rem;
-  }
+  // @include small {
+  //   padding: 2rem 1rem;
+  //   font-size: 1rem;
+  // }
   
   kbd {
     background-color: #fafbfc;
@@ -198,17 +198,17 @@ a {
   margin-top: 2rem;
   border-top: solid 1px $hr-border-color;
 
-  @include large {
-    font-size: 1rem;
-  }
+  // @include large {
+  //   font-size: 1rem;
+  // }
 
-  @include medium {
-    font-size: 1rem;
-  }
+  // @include medium {
+  //   font-size: 1rem;
+  // }
 
-  @include small {
-    font-size: 0.9rem;
-  }
+  // @include small {
+  //   font-size: 0.9rem;
+  // }
 }
 
 .site-footer-owner {
