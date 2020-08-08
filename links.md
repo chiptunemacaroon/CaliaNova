@@ -7,8 +7,11 @@ title: Links
     <span>Links</span>
 </div>
 
-[Instagram](https://www.instagram.com/chiptunemacaroon/?hl=en)
 
-[Twitter](https://twitter.com/chiptune_lagoon)
-
-[My Website](https://www.oliviabarone.com/)
+<div class="simple-list">
+    <ul> 
+        <li class="glitch" data-text="Instagram"><a href="https://www.instagram.com/chiptunemacaroon/?hl=en">Instagram</a></li>
+        <li class="glitch" data-text="Twitter"><a href="https://twitter.com/chiptune_lagoon">Twitter</a></li>
+        <li class="glitch" data-text="My Website"><a href="https://www.oliviabarone.com/">My Website</a></li>
+    </ul>
+</div>

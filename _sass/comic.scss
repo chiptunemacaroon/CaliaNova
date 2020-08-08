@@ -175,7 +175,7 @@
 
   /* The Close Button */
   .close {
-    color: #fff4f4;
+    color: $off-white;
     padding: 0.5vw;
     margin: 0;
     font-size: 3vw;
@@ -209,7 +209,7 @@
       
       li a {
         text-decoration: none;
-        color: #fff4f4;
+        color: $off-white;
         
         &:hover {
           background-color: transparent;

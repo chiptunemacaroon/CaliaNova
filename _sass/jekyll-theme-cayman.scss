@@ -3,6 +3,8 @@
 @import "variables";
 @import "animations";
 @import "comic";
+@import "utilities";
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
@@ -37,7 +39,7 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: $body-text-color;
+  color: $off-white;
 
 }
 
@@ -54,7 +56,8 @@ body {
   
     -webkit-text-stroke-width: calc(1px + 0.15vw);
     -webkit-text-stroke-color: #e4dc8c;  
-    animation: glow-text 2s ease-in-out infinite alternate;
+    text-shadow: calc(5px + 0.5vw) calc(5px + 0.5vw) $theme-purple, 
+    // animation: glow-text 2s ease-in-out infinite alternate;
   }
 }
 
@@ -105,7 +108,7 @@ a {
     height: 20%;
     min-height: 200px;
 
-    animation: glow-image 2s ease-in-out infinite alternate;
+    // animation: glow-image 2s ease-in-out infinite alternate;
   }
   
 }

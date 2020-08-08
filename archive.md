@@ -7,8 +7,10 @@ title: Archive
     <span>Chapters</span>
 </div>
 
-<ul style="padding: 0; list-style-type: none;"> 
-    {% for chapter in site.archive %}
-        <li><a href="{{ site.baseurl }}{{ chapter.url }}">{{ chapter.title }}</a></li>
-    {% endfor %}
-</ul>
+<div class="simple-list">
+    <ul> 
+        {% for chapter in site.archive %}
+            <li class="glitch" data-text="{{ chapter.title }}"><a href="{{ site.baseurl }}{{ chapter.url }}">{{ chapter.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
