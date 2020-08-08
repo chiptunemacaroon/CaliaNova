@@ -9,23 +9,23 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
 
-@mixin large {
-  @media screen and (min-width: #{$large-breakpoint}) {
-    @content;
-  }
-}
+// @mixin large {
+//   @media screen and (min-width: #{$large-breakpoint}) {
+//     @content;
+//   }
+// }
 
-@mixin medium {
-  @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
-    @content;
-  }
-}
+// @mixin medium {
+//   @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
+//     @content;
+//   }
+// }
 
-@mixin small {
-  @media screen and (max-width: #{$medium-breakpoint}) {
-    @content;
-  }
-}
+// @mixin small {
+//   @media screen and (max-width: #{$medium-breakpoint}) {
+//     @content;
+//   }
+// }
 
 * {
   box-sizing: border-box;
@@ -54,7 +54,7 @@ body {
     letter-spacing:0.5vw;
     color: $theme-pink;
   
-    -webkit-text-stroke-width: calc(1px + 0.15vw);
+    -webkit-text-stroke-width: calc(1px + 0.1vw);
     -webkit-text-stroke-color: #e4dc8c;  
     text-shadow: calc(5px + 0.5vw) calc(5px + 0.5vw) $theme-purple, 
     // animation: glow-text 2s ease-in-out infinite alternate;
