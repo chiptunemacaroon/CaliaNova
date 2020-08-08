@@ -1,10 +1,10 @@
 <!-- Automatic scrolling -->
 <script src="{{ site.baseurl }}/assets/js/comic.js"></script>
-{% assign baseurl = "https://caovicto.github.io/CaliaNova/ %}
+{% assign base_url = "https://caovicto.github.io/CaliaNova/ %}
 
 <!-- Assign next and prev variables -->
-{% assign prev_link = {{ baseurl }} | append: "/archive" %}
-{% assign next_link = {{ baseurl }} | append: "/archive" %}
+{% assign prev_link = {{base_url}} | append: "/archive" %}
+{% assign next_link = {{base_url}} | append: "/archive" %}
 
 {% for post in site.archive %}
     {% if post.title == page.title %}
@@ -28,7 +28,7 @@
 
     <!-- Navigation -->
     <div class="chapter-nav" id="first-nav">
-        <a title="first" href="{{ baseurl }}{{ site.archive.first.url }}"><img class="left" src="{{ site.baseurl }}/assets/main/first.png"></a>
+        <a title="first" href="{{base_url}}{{ site.archive.first.url }}"><img class="left" src="{{ site.baseurl }}/assets/main/first.png"></a>
         <a title="previous" href="{{ prev_link }}"><img class="left" src="{{ site.baseurl }}/assets/main/previous.png"></a>
    
         <div class="content">
@@ -37,7 +37,7 @@
          
           
         <a title="next" href="{{ next_link }}"><img class="right" src="{{ site.baseurl }}/assets/main/next.png"></a>
-        <a title="last" href="{{ baseurl }}{{ site.archive.last.url }}"><img class="right" src="{{ site.baseurl }}/assets/main/last.png"></a>
+        <a title="last" href="{{base_url}}{{ site.archive.last.url }}"><img class="right" src="{{ site.baseurl }}/assets/main/last.png"></a>
     </div>
 
     <div id="modal-container">
@@ -50,7 +50,7 @@
           <div class="modal-body">
             <ul>
               {% for chapter in site.archive %}
-              <li><a href="{{ baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a></li>
+              <li><a href="{{base_url}}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a></li>
               {% endfor %}
             </ul>
           </div>
