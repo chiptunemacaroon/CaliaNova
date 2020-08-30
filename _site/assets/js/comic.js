@@ -1,10 +1,3 @@
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    $('html, body').animate({
-        scrollTop: $("#comic").position().top
-    });
-}
-
 
 $(document).ready(function () {
     topFunction();
@@ -41,43 +34,26 @@ $(document).ready(function () {
     console.log($("[page-id='1']"));
     $("[page-id='1']").fadeIn(500);
 
-    $("[page-nav='next']").click(function() {
-        var currID = $(".chapter-pages").find(":visible").attr('page-id');
-        $("[page-id='"+currID+"']").fadeOut(500, function(){
-            var nextID = parseInt(currID, 10)+1;
-            var nextPage = $("[page-id='"+nextID+"']");
-            if (nextPage.length)
-            {
-                $(nextPage).fadeIn(500);
-            }
-            else
-            {
-                console.log($("[title='next chapter']"));
-                window.location.href = $("[title='next chapter']").attr('href');
-            }
-        })
+    $("[page-nav='prev']").click(function() {
+        prev();
     });
 
-    $("[page-nav='prev']").click(function() {
-        var currID = $(".chapter-pages").find(":visible").attr('page-id');
-        var nextID = parseInt(currID, 10)-1;
-        var nextPage = $("[page-id='"+nextID+"']");
-        if (nextPage.length)
+
+    $("[page-nav='next']").click(function() {
+        next();
+    });
+
+    $(document).keydown( function(event) {
+        // left arrow key
+        if (event.which == 37)
         {
-            $("[page-id='"+currID+"']").fadeOut(500, function(){
-                $(nextPage).fadeIn(500, function() {
-                    topFunction();
-                });
-            })
+            prev();
         }
-        else
+        // right arrow key
+        else if (event.which == 39)
         {
-            console.log($("[title='previous chapter']"));
-            window.location.href = $("[title='previous chapter']").attr('href');
+            next();
         }
-
-
-
     });
 
 
@@ -85,3 +61,50 @@ $(document).ready(function () {
 
 }); 
 
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() 
+{
+    $('html, body').animate({
+        scrollTop: $("#comic").position().top
+    });
+}
+
+function prev()
+{
+    var currID = $(".chapter-pages").find(":visible").attr('page-id');
+    var nextID = parseInt(currID, 10)-1;
+    var nextPage = $("[page-id='"+nextID+"']");
+    if (nextPage.length)
+    {
+        $("[page-id='"+currID+"']").fadeOut(0, function(){
+            $(nextPage).fadeIn(0, function() {
+                topFunction();
+            });
+        })
+    }
+    else
+    {
+        console.log($("[title='previous chapter']"));
+        window.location.href = $("[title='previous chapter']").attr('href');
+    }
+}
+
+function next() 
+{
+    var currID = $(".chapter-pages").find(":visible").attr('page-id');
+    var nextID = parseInt(currID, 10)+1;
+    var nextPage = $("[page-id='"+nextID+"']");
+    if (nextPage.length)
+    {
+        $("[page-id='"+currID+"']").fadeOut(0, function(){
+            $(nextPage).fadeIn(0, function() {
+                topFunction();
+            });
+        })
+    }
+    else
+    {
+        console.log($("[title='next chapter']"));
+        window.location.href = $("[title='next chapter']").attr('href');
+    }
+}
