@@ -34,6 +34,10 @@ $(document).ready(function () {
     console.log($("[page-id='1']"));
     $("[page-id='1']").fadeIn(500);
 
+    $("[page-id]").click( function() {
+        next();
+    })
+
     $("[page-nav='prev']").click(function() {
         prev();
     });
