@@ -1,0 +1,226 @@
+@import "normalize";
+@import "rouge-github";
+@import "variables";
+@import "animations";
+@import "comic";
+@import "utilities";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+
+@mixin large {
+  @media screen and (min-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: #{$medium-breakpoint}) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; 
+}
+
+body {
+  background-color: $bg-color;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $off-white;
+
+}
+
+.pop-up {
+  text-align: center;
+  padding-bottom: 2vw;
+
+  span {
+    text-transform:uppercase;
+    font-size: min(100px, calc(40px + 5vw));
+    line-height: 2.5vw;
+    letter-spacing:0.5vw;
+    color: $theme-pink;
+  
+    -webkit-text-stroke-width: calc(1px + 0.1vw);
+    -webkit-text-stroke-color: #e4dc8c;  
+    text-shadow: calc(5px + 0.5vw) calc(5px + 0.5vw) $theme-purple, 
+    // animation: glow-text 2s ease-in-out infinite alternate;
+  }
+}
+
+
+
+#skip-to-content {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+
+  &:focus {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: auto;
+    width: auto;
+    background: invert($body-link-color);
+    outline: thick solid invert($body-link-color);
+  }
+}
+
+a {
+  color: $body-link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.page-header {
+  color: $header-heading-color;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 1vw 4vw;
+
+  background-image: radial-gradient(120vw 2vw at bottom, $header-bg-color 0, $header-bg-color 100vh, $horizon-second 110vh, $horizon 150vh, transparent 270vh);
+
+  img {
+    width: 20%;
+    min-width: 300px;
+    height: 20%;
+    min-height: 200px;
+
+    @include small {
+      width: 10%;
+      min-width: 200px;
+      height: 10%;
+      min-height: 100px;
+    }
+  }
+  
+}
+
+.particle-js {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+
+  background-color: $header-bg-color;  
+}
+
+
+.button-content {
+  position: relative;
+}
+
+
+.main-content {
+  word-wrap: break-word;
+  animation:slide 3s;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  @include large {
+    max-width: 64rem;
+    padding: 2rem 6rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  @include medium {
+    padding: 2rem 4rem;
+    font-size: 1.1rem;
+  }
+
+  @include small {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+  
+  kbd {
+    background-color: #fafbfc;
+    border: 1px solid #c6cbd1;
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
+    color: #444d56;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 10px;
+    padding: 3px 5px;
+    vertical-align: middle;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: $section-headings-color;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+}
+
+.site-footer {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: solid 1px $hr-border-color;
+
+  @include large {
+    font-size: 1rem;
+  }
+
+  @include medium {
+    font-size: 1rem;
+  }
+
+  @include small {
+    font-size: 0.9rem;
+  }
+}
+
+.site-footer-owner {
+  display: block;
+  font-weight: bold;
+}
+
+.site-footer-credits {
+  color: $blockquote-text-color;
+}

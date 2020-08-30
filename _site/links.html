@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css?v=63bd1488c586583a10f2709a0db8f20b40fd7459">
+    <link rel="stylesheet" href="/assets/css/style.css?v=0591b1ae3afb891c9aed8dc07f6b9edeab5008d3">
     <link rel="icon" type="image/png" href="/assets/main/favicon.png"/>
   </head>
 
@@ -28,19 +28,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="/assets/js/particles.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+    <!-- <script src="/assets/js/particles.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script type="module" src="/assets/js/background.js"></script>
 
     
     <header class="page-header">
-      <div class="particle-js" id="particle-js"></div>
+      <!-- <div class="particle-js" id="particle-js"></div> -->
+      <div class="background"></div>
 
       <div id="halo"></div>
       
       <img src="/assets/main/logo.png" alt="logo"/>
 
       <div class="button-content" name="buttons">
-        <a href="" class="custom-btn">Home</a>
+        <a href="/home" class="custom-btn">Home</a>
         <a href="/archive" class="custom-btn">Archive</a>
         <a href="/about" class="custom-btn">About</a>
         <a href="/links" class="custom-btn">Links</a>
@@ -49,15 +52,13 @@
 
 
     <main id="content" class="main-content" role="main">
-      <div class="pop-up">
-    <span>Links</span>
-</div>
+      <div class="glitch" data-text="Links">Links</div>
 
 <div class="simple-list">
     <ul> 
-        <li class="glitch" data-text="Instagram"><a href="https://www.instagram.com/chiptunemacaroon/?hl=en">Instagram</a></li>
-        <li class="glitch" data-text="Twitter"><a href="https://twitter.com/chiptune_lagoon">Twitter</a></li>
-        <li class="glitch" data-text="My Website"><a href="https://www.oliviabarone.com/">My Website</a></li>
+        <li><a href="https://www.instagram.com/chiptunemacaroon/?hl=en">Instagram</a></li>
+        <li><a href="https://twitter.com/chiptune_lagoon">Twitter</a></li>
+        <li><a href="https://www.oliviabarone.com/">My Website</a></li>
     </ul>
 </div>
 

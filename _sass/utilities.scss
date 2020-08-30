@@ -22,16 +22,17 @@ text set in the data-text attribute. */
         list-style-type: none;
 
         li {
-            padding: 1vw 0;
+            padding: 1vh 0;
             display:block;
             width: fit-content;
 
             a {
+                font-size: calc(10px + 1vw);
                 color: $off-white;
             }
             
             a:hover {
-                color: inherit;
+                color: $horizon;
                 text-decoration: none;
                 cursor: pointer;
             }
@@ -39,43 +40,44 @@ text set in the data-text attribute. */
     }
 }
 
-
 .glitch{
     color:$off-white;
-    font-size: calc(12px + 1vw);
+    font-size: calc(12px + 3vw);
     position:relative;
-    margin:0;
+    margin:0 auto;
+    // left: 25%;
     
-    &:hover {
+    
+    // &:hover {
         &:before{
             content:attr(data-text);
             position:absolute;
             left:-0.1vw;
-            text-shadow:0.1vw 0 $glitch; 
+            text-shadow:0.2vw 0 $glitch; 
             top:0;
             color:$horizon-second;
             background:$bg-color;
             overflow:hidden;
             clip:rect(0,0.1vw,0,0); 
-            animation:noise-anim-2 2s infinite linear alternate-reverse;
+            animation:noise-anim-2 3s infinite linear alternate-reverse;
         }
         
         &:after{
             content:attr(data-text);
             position:absolute;
             left:0.1vw;
-            text-shadow:-1px 0 $glitch-secondary;
+            text-shadow:-0.2vw 0 $glitch-secondary;
             top:0;
             color:$horizon-second;
             background:$bg-color;
             overflow:hidden;
             clip:rect(0,0.1vw,0,0); 
-            animation:noise-anim 2s infinite linear alternate-reverse;
+            animation:noise-anim 3s infinite linear alternate-reverse;
         }
 
-        cursor: pointer;
-    }
-  }
+        // cursor: pointer;
+    // }
+}
   
 
 

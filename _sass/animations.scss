@@ -1,4 +1,17 @@
 // Full page animations
+@keyframes slide {
+    0% { 
+      clip-path: polygon(100% 120%, 100% 115%, 0% 115%, 0% 120%); 
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% { 
+      clip-path: polygon(100% -15% , 100% 120% , 0% 120% , 0% -15%);
+      transfor: traslateY(0);
+      opacity: 1;
+    }
+  }
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

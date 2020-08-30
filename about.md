@@ -3,9 +3,7 @@ layout: default
 title: About
 ---
 
-<div class="pop-up">
-    <span>About</span>
-</div>
+<div class="glitch" data-text="About">About</div>
 
 Aspiring witch Violet Amaryllis aims to reform the corrupt Hero Industry, and attending academy Calia Nova seems like the perfect way to do it!
 

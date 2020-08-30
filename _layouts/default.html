@@ -25,19 +25,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="{{ site.baseurl }}/assets/js/particles.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+    <!-- <script src="{{ site.baseurl }}/assets/js/particles.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script type="module" src="{{ site.baseurl }}/assets/js/background.js"></script>
 
     
     <header class="page-header">
-      <div class="particle-js" id="particle-js"></div>
+      <!-- <div class="particle-js" id="particle-js"></div> -->
+      <div class="background"></div>
 
       <div id="halo"></div>
       
       <img src="{{ site.baseurl }}/assets/main/logo.png" alt="logo"/>
 
       <div class="button-content" name="buttons">
-        <a href="{{ site.baseurl }}" class="custom-btn">Home</a>
+        <a href="{{ site.baseurl }}/home" class="custom-btn">Home</a>
         <a href="{{ site.baseurl }}/archive" class="custom-btn">Archive</a>
         <a href="{{ site.baseurl }}/about" class="custom-btn">About</a>
         <a href="{{ site.baseurl }}/links" class="custom-btn">Links</a>

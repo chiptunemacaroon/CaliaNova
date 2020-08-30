@@ -60,7 +60,7 @@
   display: inline-block;
   margin-bottom: 1rem;
   padding: calc(5px + 0.2vw);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   font-size: calc(12px + 0.5vw);
 
   background-color: rgba(255, 255, 255, 0.08);
@@ -142,7 +142,7 @@
   .modal-background {
     display:inline-block;
 
-    background:$horizon;
+    background:$horizon-transparent;
     height: 100%;
     width: 100%;
   }
@@ -178,8 +178,12 @@
     color: $off-white;
     padding: 0.5vw;
     margin: 0;
-    font-size: 3vw;
+    font-size: calc(12px + 2vw);
     font-weight: bold;
+
+    // @include small {
+
+    // }
   }
 
   .close:hover,
