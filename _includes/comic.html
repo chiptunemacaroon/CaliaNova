@@ -4,14 +4,15 @@
 <!-- Assign next and prev variables -->
 <!-- {% assign prev_link = "https://caovicto.github.io/CaliaNova/archive" %}
 {% assign next_link = "https://caovicto.github.io/CaliaNova/archive" %} -->
-{% assign prev_link = {{ site.baseurl }} | append:"/archive" %}
-{% assign next_link = {{ site.baseurl }} | append:"/archive" %}
+{% assign prev_link = site.baseurl | append:"/archive" %}
+{% assign next_link = site.baseurl | append:"/archive" %}
+
 
 {% unless page.next == nil %}
-    {% assign next_link = page.next.url %}
+    {% assign next_link = site.baseurl | append:page.next.url %}
 {% endunless %}
 {% unless page.previous == nil %}
-  {% assign prev_link = page.previous.url %}
+  {% assign prev_link = site.baseurl | append:page.previous.url %}
 {% endunless %}
 
 
