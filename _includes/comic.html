@@ -46,7 +46,7 @@
           <div class="modal-body">
             <ul>
               {% for chapter in site.archive %}
-              <li><a href="{{ base_url }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a></li>
+              <li><a href="{{ site.baseurl }}{{ chapter.url }}" class="dropdown-item">{{ chapter.title }}</a></li>
               {% endfor %}
             </ul>
           </div>
